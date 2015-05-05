@@ -1,0 +1,41 @@
+<html>
+<head><!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- THIS IS NEW -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+<!-- THIS IS NEW -->
+<script type="text/javascript" src="scripts/moment.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<!-- THIS IS NEW -->
+<script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
+
+<script>
+    $(".glyphicon-time").addClass("btn btn-primary");
+</script>
+
+</body>
+</html>
