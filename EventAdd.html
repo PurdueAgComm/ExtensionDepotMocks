@@ -17,6 +17,7 @@
 
     <!-- Main Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/redmond/jquery-ui.css" />
 
@@ -168,29 +169,322 @@
                     <!-- BEGIN MOCKUP FOR EVENTADD PAGE. -->
                     <style type="text/css">
                         .form-inset{
-                            margin: 10px;                            
+                            margin: 10px;
                         }
                         .form-group.required label:after {
                           content:"*";
                           color:red;
-                        }                        
+                        }
+
+                        .panel-title {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                        }
                     </style>
 
                     <h2>Create Event</h2>
                     <form class="form-inset">
-                        <div class="form-group required">
-                            <label for="inputTitle">Title</label>
-                            <input type="text" class="form-control required" id="inputTitle" placeholder="Title">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">General Information</h3></div>
+                                <div class="panel-body">
+                                    <div class="form-group required">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group required">
+                                                    <label for="inputTitle">Title</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                    <input type="text" class="form-control required" id="inputTitle">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Home</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <select name="inputHome" id="inputHome" class="form-control required">
+                                                    <option>Load Saved Location</option>
+                                                    <option>Agriculture Administration</option>
+                                                    <option>Tarkington Hall</option>
+                                                    <option>Tippecanoe Extension Office</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Yes, pin this story to the top of my event feed.</label> <i class="glyphicon glyphicon-question-sign"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="#" class="pull-right btn btn-default"><i class="glyphicon glyphicon-plus-sign"></i> Add Time and Place</a>
+                            <br /><br />
                         </div>
-                        <div class="form-group">
-                            <label for="inputPassword">Password</label>
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Time &amp; Place</h3></div>
+                                <div class="panel-body">
+                                     <div class="checkbox">
+                                        <label><input type="checkbox"> All day</label> <i class="glyphicon glyphicon-question-sign"></i>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">From</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <div class='input-group date' id='datetimefrom'>
+                                                    <input type='text' class="form-control" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">To</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <div class='input-group date' id='datetimeto'>
+                                                    <input type='text' class="form-control" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="radio" style="margin-top: 33px;">
+                                              <label>
+                                                <input type="radio" name="timezone" id="timezone" value="EST" checked>
+                                                EST
+                                              </label>
+                                              <label>
+                                                <input type="radio" name="timezone" id="timezone" value="CST" >
+                                                CST
+                                              </label>
+                                              &nbsp;&nbsp;<i class="glyphicon glyphicon-question-sign"></i>
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- /.row -->
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Where</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <select name="inputHome" id="inputHome" class="form-control required">
+                                                    <option>Load Saved Location</option>
+                                                    <option>Agriculture Administration</option>
+                                                    <option>Tarkington Hall</option>
+                                                    <option>Tippecanoe Extension Office</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="margin-top: 33px;">
+                                            <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add Saved Location</a>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Building</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Room</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Address</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Address 2</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">City</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">State</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <select name="inputHome" id="inputHome" class="form-control required">
+                                                    <option>Indiana</option>
+                                                    <option>Indiana</option>
+                                                    <option>Indiana</option>
+                                                    <option>Indiana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Zip Code</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input maxlength="5" type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="#" class="btn btn-default btn-block"><i class="glyphicon glyphicon-plus-sign"></i> Add Time and Place</a>
+                            <br /><br />
                         </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>    
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Contact &amp; Registration Information</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Name</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Email</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Phone</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Registraton URL</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                                <p class="help-block"><i class="glyphicon glyphicon-help-sign"></i> Remember to always start with http://</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label for="inputTitle">Cost</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <input type="text" class="form-control required" id="inputTitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Detailed Event Information</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Event Type</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <select name="inputHome" id="inputHome" class="form-control required">
+                                                    <option>Choose an event type</option>
+                                                    <option>Type A</option>
+                                                    <option>Type B</option>
+                                                    <option>Zombie</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label for="inputTitle">Description</label>  <i class="glyphicon glyphicon-question-sign"></i>
+                                                <select name="inputHome" id="inputHome" class="form-control required">
+                                                    <option>Load Saved Description</option>
+                                                    <option>Monthly Newsletter</option>
+                                                    <option>Generic News Release</option>
+                                                    <option>Link Farm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="margin-top: 33px;">
+                                            <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add Saved Description</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <textarea rows="12" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                     <button type="submit" class="btn btn-primary btn-lg btn-block">Create Event</button>
+                    </form>
+
                     <!-- END MOCKUP FOR EVENTADD PAGE. -->
 
     <div id="ctl00_MainContentPlaceHolder_contactDiv">
@@ -248,6 +542,15 @@
         <!-- End of wrapper -->
 
         <!-- Scripts:  should be concatenated and minified via ant build script -->
+        <script type="text/javascript" src="scripts/moment.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimefrom').datetimepicker();
+                $('#datetimeto').datetimepicker();
+                $(".glyphicon-time").addClass("btn btn-primary");
+            });
+        </script>
 </form>
 </body>
 </html>
