@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/redmond/jquery-ui.css" />
     <!-- Font Awesome because they're much better than glyphicons -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+    <!-- Multiselect CSS -->
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -204,28 +205,96 @@
                                             <div class="panel-body">
                                                 <div class="row">
                                                     <div class="col-sm-12">
-                                                        <div class="form-group required">
-                                                            <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <select id="inputLocation" class="form-control required">
-                                                                <option>-- All Homes --</option>
-                                                                <option>Extension</option>
-                                                                <option>Adams</option>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox"> Pinned Events</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                            <select class="form-control" id="countiesExt" multiple="multiple">
+                                                                <option value="Adams">Adams</option>
+                                                                <option value="Allen">Allen</option>
+                                                                <option value="Bartholomew">Bartholomew</option>
+                                                                <option value="Benton">Benton</option>
+                                                                <option value="Boone">Boone</option>
+                                                                <option value="Brown">Brown</option>
                                                             </select>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="form-group required">
-                                                            <label for="inputCategory">Category</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <select id="inputCategory" class="form-control required">
-                                                                <option>-- All Categories --</option>
-                                                                <option>Agriculture</option>
-                                                                <option>Community</option>
-                                                            </select>
+                                                            <label for="inputCategory">Category</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a> <br />
+                                                            <div style="margin-left: 20px;">
+                                                                <a href="#">Agriculture</a> <br />
+                                                                <a href="#">Community</a> <br />
+                                                                <a href="#">Environment</a> <br />
+                                                                <a href="#">Family</a> <br />
+                                                                <a href="#">Food</a> <br />
+                                                                <a href="#">Garden</a> <br />
+                                                                <a href="#">Youth</a> <br />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="dateTimeFromSelect">Start Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                                                            <div class="input-group date" id="datetimefrom">
+                                                                <input type="text" class="form-control" id="dateTimeFromSelect"/>
+                                                                <span class="input-group-addon">
+                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                </span>
+                                                            </div>
+                                                            <br />
+                                                            <label for="dateTimeFromSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                                                            <div class="input-group date" id="datetimeto">
+                                                                <input type='text' class="form-control" id="dateTimeToSelect" />
+                                                                <span class="input-group-addon">
+                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--
+                                                    <div class="col-sm-1">
+                                                    -
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <label>&nbsp;</label>
+
+                                                        </div>
+                                                    </div>
+                                                    -->
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="typesExt">Type</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                                                        <select class="form-control" id="typesExt">
+                                                            <option value="1">All Types</option>
+                                                            <option value="1">4-H Program</option>
+                                                            <option value="1">Something Else</option>
+                                                            <option value="1">Really Pointless</option>
+                                                            <option value="1">Space Monkey</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
                                             </div> <!-- /.panel-body -->
                                         </div> <!-- /.panel -->
                                     </div> <!-- /.col-sm-12 -->
@@ -287,8 +356,8 @@
                                     <!-- End Record -->
 
                                     <!-- Record -->
-                                    <tr class="warning">
-                                        <td><i class="fa fa-share-alt"></i></td>
+                                    <tr class="info">
+                                        <td><i data-toggle="tooltip" data-placement="left" title="This event has been shared with you." class="fa fa-share-alt"></i></td>
                                         <td><a href="#">Pending Pushed Event</a></td>
                                         <td>4:05 PM</td>
                                         <td class="text-right">
@@ -301,7 +370,7 @@
 
                                     <!-- Record -->
                                     <tr>
-                                        <td><i class="fa fa-share-alt"></i> <i class="fa fa-thumb-tack"></i></td>
+                                        <td><i  data-toggle="tooltip" data-placement="left" title="This event has been shared with you." class="fa fa-share-alt"></i> <i  data-toggle="tooltip" data-placement="left" title="This event is pinned to your event list." class="fa fa-thumb-tack"></i></td>
                                         <td><a href="#">Pushed Pinned Event</a></td>
                                         <td>4:05 PM</td>
                                         <td class="text-right">
@@ -365,7 +434,7 @@
 
                                     <!-- Record -->
                                     <tr>
-                                        <td><i class="fa fa-share-alt"></i> <i class="fa fa-thumb-tack"></i></td>
+                                        <td><i  data-toggle="tooltip" data-placement="left" title="This event has been shared with you." class="fa fa-share-alt"></i> <i  data-toggle="tooltip" data-placement="left" title="This event is pinned to your event list." class="fa fa-thumb-tack"></i></td>
                                         <td><a href="#">Pushed State Event</a></td>
                                         <td>4:05 PM</td>
                                         <td class="text-right"><!-- Counties would have no control over State pushed events, so no controls appear--></td>
@@ -490,11 +559,27 @@
         <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="scripts/moment.js"></script>
         <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-multiselect.js"></script>
         <script type="text/javascript">
             $(function () {
                 $('#datetimefrom').datetimepicker();
                 $('#datetimeto').datetimepicker();
                 $(".glyphicon-time").addClass("btn btn-primary");
+            });
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#countiesExt').multiselect({
+                    buttonWidth: '100%',
+                    dropRight: true,
+                    numberDisplayed: 1,
+                    enableFiltering: 1,
+                    enableCaseInsensitiveFiltering: true,
+                    includeSelectAllOption: 1
+                });
             });
         </script>
 </form>
