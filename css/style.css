@@ -46,16 +46,10 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 
 /* =============================================================================
-   Links
+   Links - bootstrap will handle link styles
    ========================================================================== */
 
-a { color: #00558D; /*color: #00e;*/ text-decoration: none; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
 
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-a:hover, a:active { outline: 0; }
 
 
 /* =============================================================================
@@ -232,7 +226,7 @@ body
     background: url("../images/Bkgrd.png") repeat-x top left;
 }
 
-#wrapper 
+#wrapper
 {
 	margin: auto;
 	max-width:960px;
@@ -252,23 +246,23 @@ body
 /* help container */
 #HelpPagePacement {
     padding-right: 1em;
-    padding-top: 2.85em; 
+    padding-top: 2.85em;
     display: inline-block;
     position: absolute;
     margin-left: 540px;
 }
-#helpcontainer 
+#helpcontainer
 {
 	background: #EDEDED;
 	border: 1px #cccccc solid;
-	font-size: 0.75em; 
+	font-size: 0.75em;
 	margin-top: 112px;
 	padding: 0;
 	position: absolute;
 	right: 0;
 	width: 20em;
 }
-#helptoprow 
+#helptoprow
 {
 	padding: 8px;
 }
@@ -277,11 +271,11 @@ body
 	width: 100%;
 	word-wrap: hyphenate;
 }
-#helpbody 
+#helpbody
 {
 	padding: 7px;
 }
-#helpTOC 
+#helpTOC
 {
 	float: right;
 }
@@ -317,11 +311,11 @@ body
 /* Site header */
 header
 {
-	/* background: url("../images/BannerAgad.jpg") no-repeat; 
+	/* background: url("../images/BannerAgad.jpg") no-repeat;
        box-shadow:0 0 10px rgba(0, 0, 0, 0.5); */
 	background-color:transparent;
 	height: 100px;
-	
+
 }
 
 	header img.logo
@@ -338,8 +332,8 @@ header
 		font-family: Times New Roman,Garamond,Georgia,serif;
 		font-weight: normal;
         color: #fff;
-        margin-left:1em;        
-		margin-top: .8em; 
+        margin-left:1em;
+		margin-top: .8em;
 		width: 680px;
 	}
 
@@ -349,7 +343,7 @@ header
 			text-decoration: none;
 		}
 
-/* Top navigation */		
+/* Top navigation */
 nav
 {
 	background: none repeat scroll 0 0 #000;
@@ -491,7 +485,7 @@ nav *:hover > a
 		color: #fff;
 		text-decoration: none;
 	}
-	
+
 		.messageContent .message a.clearLink
 		{
 			padding-left: 1.5em;
@@ -499,7 +493,7 @@ nav *:hover > a
 
 			.messageContent .message a.clearLink img
 			{
-				width: 10px; 
+				width: 10px;
 				height: 10px;
 			}
 
@@ -578,9 +572,9 @@ nav *:hover > a
 	margin-bottom: 0;
 }
 
-	.searchTbl td 
+	.searchTbl td
 	{
-		padding-right: 0.5em; 
+		padding-right: 0.5em;
 	}
 
 	.searchTbl #headerRow
@@ -613,7 +607,7 @@ nav *:hover > a
 		border-bottom: solid 1px #999;
 		color: #a37b2c;
 	}
-	
+
 		#main h2 span.links
 		{
 			font-size: 70%;
@@ -625,7 +619,7 @@ nav *:hover > a
 			float: right;
 			font-weight: normal;
 		}
-		
+
 	#main .topControls
 	{
 		margin-bottom: 2em;
@@ -635,7 +629,7 @@ nav *:hover > a
 	{
 		margin-top: 2em;
 	}
-	
+
 	#main .rightMenu
 	{
 		border-left: dashed 1px #555;
@@ -645,26 +639,26 @@ nav *:hover > a
 		width: 220px;
 	}
 
-	#main dl 
+	#main dl
 	{
 		margin: 25px 0;
 	}
 
-		#main dl dt 
+		#main dl dt
 		{
 		}
 
-			#main dl dt span 
+			#main dl dt span
 			{
 				font-weight: normal;
 			}
 
-		#main dl dd 
+		#main dl dd
 		{
 			margin: 0.5em 0 2em;
 		}
 
-			#main dl dd p 
+			#main dl dd p
 			{
 				margin-top: 0.75em;
 			}
@@ -729,7 +723,7 @@ h2.tablelessFormHeader
 	{
 		margin: 0.75em 0 0.75em 15em;
 	}
-	
+
 /* Inputs */
 textarea
 {
@@ -798,7 +792,7 @@ input[type=checkbox]
 	vertical-align: top;
 }
 
-.control-group > label > span:first-child 
+.control-group > label > span:first-child
 {
     padding-left: 0.75em;
 }
@@ -863,7 +857,7 @@ h4.tableHeader
 	{
 		vertical-align: top;
 	}
-	
+
 	.recordTbl tr.alternateRow
 	{
 		background-color: #F2F9FC;
@@ -873,17 +867,17 @@ h4.tableHeader
 	{
 		width: 7em;
 	}
-			
+
 	.recordTbl .scope
 	{
 		width: 5em;
 	}
-		
+
 	.recordTbl .name
 	{
 		width: 15em;
 	}
-	
+
 	.recordTbl span.archived
 	{
 		color: #a02a2a;
@@ -907,14 +901,14 @@ h4.tableHeader
 
 
 
-			
+
 /* Footer */
 footer
 {
 	background: none repeat scroll 0 0 #000;
 	/* border-top: solid 5px #a37b2c; */
 	height: 6em;	/* height = [(# lines) * 1em] + 3em  ; where 3em is the padding of the footer p */
-	
+
     /* removed corners on footer
     border-bottom-left-radius :10px;
 	border-bottom-right-radius: 10px;
@@ -935,34 +929,34 @@ footer
 	footer a:visited,
 	footer a:hover,
 	footer a:focus,
-	footer a:active 
+	footer a:active
 	{
 		/* color: #a37b2c; */
         color: #EEE;
 	}
-	
+
 	footer a,
 	footer a:visited
 	{
 		text-decoration: none;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==|== media queries ======================================================
