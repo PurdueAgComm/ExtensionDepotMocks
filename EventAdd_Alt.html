@@ -213,6 +213,7 @@
                                                 <label for="inputHome">Home</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
                                                 <select id="inputHome" class="form-control required">
                                                     <option>Select a Home</option>
+                                                    <option value="PE">Purdue Extension</option>
                                                     <option value="Adams">Adams</option>
                                                     <option value="Allen">Allen</option>
                                                     <option value="Bartholomew">Bartholomew</option>
@@ -256,13 +257,13 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <h3 class="subHeading">When</h3>
-                                        <div class="col-sm-4" style="margin-top: 30px;">
+                                        <div class="col-sm-4" style="margin-top: 35px;">
                                             <div class="form-group required">
-                                                <label for="dateTimeFromSelect">Day</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                <div class="input-group date" id="datetimeDay">
-                                                    <input type="text" class="form-control" id="dateTimeFromSelect"/>
+                                                <label for="dateTimeFromSelect">Date</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <div class="input-group date datetimeDay">
+                                                    <input type="text" class="form-control datetimeDay"/>
                                                     <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                        <span class="fa fa-calendar"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -276,11 +277,11 @@
 
                                                     <div class="col-sm-4">
                                                         <div class="form-group required">
-                                                            <label for="dateTimeFromSelect">From</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date" id="datetimeFrom">
-                                                                <input type="text" class="form-control" id="dateTimeFromSelect"/>
+                                                            <label for="dateTimeFromSelect">Start Time</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                            <div class="input-group date datetimeFrom">
+                                                                <input type="text" class="form-control datetimeFrom"/>
                                                                 <span class="input-group-addon">
-                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                    <span class="fa fa-clock-o"></span>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -288,11 +289,11 @@
 
                                                     <div class="col-sm-4">
                                                         <div class="form-group required">
-                                                            <label for="dateTimeToSelect">To</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date" id="datetimeTo">
-                                                                <input type='text' class="form-control" id="dateTimeToSelect" />
+                                                            <label for="dateTimeToSelect">End Time</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                            <div class="input-group date datetimeTo">
+                                                                <input type='text' class="form-control datetimeTo" />
                                                                 <span class="input-group-addon">
-                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                    <span class="fa fa-clock-o"></span>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -330,7 +331,7 @@
                                                     <option>Load Saved Location</option>
                                                     <option>Agriculture Administration</option>
                                                     <option>Tarkington Hall</option>
-                                                    <option>Tippecanoe Extension Office</option>
+                                                    <option>Adams County Extension Office</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -587,14 +588,19 @@
         <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('#datetimeDay').datetimepicker({
-                    format: 'YYYY-MM-DD'
+                $('.datetimeDay').datetimepicker({
+                    format: 'MM-DD-YYYY',
+                    showClose: true
                 });
-                $('#datetimeFrom').datetimepicker({
-                    format: 'h:mm A'
+                $('.datetimeFrom').datetimepicker({
+                    format: 'h:mm A',
+                    showClose: true,
+                    toolbarPlacement: "bottom"
                 });
-                $('#datetimeTo').datetimepicker({
-                    format: 'h:mm A'
+                $('.datetimeTo').datetimepicker({
+                    format: 'h:mm A',
+                    showClose: true,
+                    toolbarPlacement: "bottom"
                 });
             });
         </script>
