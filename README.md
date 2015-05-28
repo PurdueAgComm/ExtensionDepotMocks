@@ -22,7 +22,6 @@ Canonical Version: LocationAdd.html
 Upcoming Mockups
 --------------
 
-- Location Template Management Page(s)
 - Notification System
 
 -----------------------------------------------------------------------------
