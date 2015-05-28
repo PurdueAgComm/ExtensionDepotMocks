@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/redmond/jquery-ui.css" />
-    <!-- Font Awesome because they're much better than glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -181,13 +180,6 @@
                             font-weight: bold;
                             font-size: 1.2em;
                         }
-
-                        .subHeading {
-                            margin-left: 10px;
-                            font-weight: bold;
-                            border-bottom: 1px solid #dadada;
-                            width:97%;
-                        }
                     </style>
 
                     <h2>Create Event</h2>
@@ -201,7 +193,7 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group required">
-                                                    <label for="inputTitle">Title</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                    <label for="inputTitle">Title</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                     <input type="text" class="form-control required" id="inputTitle">
                                                 </div>
                                             </div>
@@ -210,17 +202,12 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group required">
-                                                <label for="inputHome">Home</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputHome">Home</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <select id="inputHome" class="form-control required">
-                                                    <option>Select a Home</option>
-                                                    <option value="PE">Purdue Extension</option>
-                                                    <option value="Adams">Adams</option>
-                                                    <option value="Allen">Allen</option>
-                                                    <option value="Bartholomew">Bartholomew</option>
-                                                    <option value="Benton">Benton</option>
-                                                    <option value="Boone">Boone</option>
-                                                    <option value="Brown">Brown</option>
-                                                    <option value="3">All Other Counties...</option>
+                                                    <option>Load Saved Location</option>
+                                                    <option>Agriculture Administration</option>
+                                                    <option>Tarkington Hall</option>
+                                                    <option>Tippecanoe Extension Office</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -228,7 +215,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Yes, pin this story to the top of my event feed.</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label><input type="checkbox"> Yes, pin this story to the top of my event feed.</label> <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -239,7 +226,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="#" class="pull-right btn btn-default"><i class="fa fa-plus-circle"></i> Add Time and Place</a>
+                            <a href="#" class="pull-right btn btn-default"><i class="glyphicon glyphicon-plus-sign"></i> Add Time and Place</a>
                             <br /><br />
                         </div>
                     </div>
@@ -250,99 +237,78 @@
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Time &amp; Place</h3>
                                     <!-- THIS REMOVE BUTTON ONLY EXISTS WHEN THERE ARE > 1 TIME AND PLACES -->
-                                    <a style="margin-top: -25px;" href="#" class="pull-right btn btn-sm btn-default"><i class="fa fa-minus-circle"></i> Remove</a>
+                                    <a style="margin-top: -25px;" href="#" class="pull-right btn btn-sm btn-default"><i class="glyphicon glyphicon-remove-sign"></i> Remove</a>
 
 
                                 </div>
                                 <div class="panel-body">
+                                     <div class="checkbox">
+                                        <label><input type="checkbox"> All day</label> <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
+                                    </div>
+
                                     <div class="row">
-                                        <h3 class="subHeading">When</h3>
-                                        <div class="col-sm-4" style="margin-top: 35px;">
+                                        <div class="col-sm-4">
                                             <div class="form-group required">
-                                                <label for="dateTimeFromSelect">Date</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                <div class="input-group date datetimeDay">
-                                                    <input type="text" class="form-control datetimeDay"/>
+                                                <label for="dateTimeFromSelect">From</label> <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
+                                                <div class="input-group date" id="datetimefrom">
+                                                    <input type="text" class="form-control" id="dateTimeFromSelect"/>
                                                     <span class="input-group-addon">
-                                                        <span class="fa fa-calendar"></span>
+                                                        <span class="glyphicon glyphicon-calendar"></span>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <div class="checkbox" style="margin-left: 15px;">
-                                                        <label><input type="checkbox"> All day</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                    </div>
 
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group required">
-                                                            <label for="dateTimeFromSelect">Start Time</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date datetimeFrom">
-                                                                <input type="text" class="form-control datetimeFrom"/>
-                                                                <span class="input-group-addon">
-                                                                    <span class="fa fa-clock-o"></span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group required">
-                                                            <label for="dateTimeToSelect">End Time</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date datetimeTo">
-                                                                <input type='text' class="form-control datetimeTo" />
-                                                                <span class="input-group-addon">
-                                                                    <span class="fa fa-clock-o"></span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-sm-4">
-                                                        <div class="radio" style="margin-top: 33px;">
-                                                          <label>
-                                                            <input type="radio" name="timezone" id="timezone" value="EST" checked>
-                                                            EST
-                                                          </label>
-                                                          <label>
-                                                            <input type="radio" name="timezone" id="timezone" value="CST" >
-                                                            CST
-                                                          </label>
-                                                          &nbsp;<a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
-                                                        </div>
-                                                    </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group required">
+                                                <label for="dateTimeToSelect">To</label> <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
+                                                <div class="input-group date" id="datetimeto">
+                                                    <input type='text' class="form-control" id="dateTimeToSelect" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <br />
-
-                                    <div class="row">
-                                        <h3 class="subHeading">Where</h3>
-                                        <div class="col-sm-4 pull-right" style="margin-top: -40px;">
-                                            <a href="#"><i class="fa fa-plus-circle"></i> Create New Saved Location</a>
+                                        <div class="col-sm-4">
+                                            <div class="radio" style="margin-top: 33px;">
+                                              <label>
+                                                <input type="radio" name="timezone" id="timezone" value="EST" checked>
+                                                EST
+                                              </label>
+                                              <label>
+                                                <input type="radio" name="timezone" id="timezone" value="CST" >
+                                                CST
+                                              </label>
+                                              &nbsp;<a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-3 pull-right" style="margin-top: -50px; margin-right: 300px;">
+
+                                    </div> <!-- /.row -->
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group required">
-                                                <label class="sr-only" for="inputLocation">Where</label></a>
+                                                <label for="inputLocation">Where</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <select id="inputLocation" class="form-control required">
                                                     <option>Load Saved Location</option>
                                                     <option>Agriculture Administration</option>
                                                     <option>Tarkington Hall</option>
-                                                    <option>Adams County Extension Office</option>
+                                                    <option>Tippecanoe Extension Office</option>
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="col-sm-6" style="margin-top: 33px;">
+                                            <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add Saved Location</a>
+                                        </div>
                                     </div>
 
-                                    <br />
+                                    <hr>
 
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group">
-                                                <label for="inputBuilding">Building</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputBuilding">Building</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputBuilding">
                                             </div>
                                         </div>
@@ -351,7 +317,7 @@
                                     <div class="row">
                                         <div class="col-sm-2">
                                             <div class="form-group">
-                                                <label for="inputRoom">Room</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputRoom">Room</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputRoom">
                                             </div>
                                         </div>
@@ -360,7 +326,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group required">
-                                                <label for="inputAddress">Address</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputAddress">Address</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputAddress">
                                             </div>
                                         </div>
@@ -369,7 +335,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group">
-                                                <label for="inputAddress2">Address 2</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputAddress2">Address 2</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputAddress2">
                                             </div>
                                         </div>
@@ -378,7 +344,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group required">
-                                                <label for="inputCity">City</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputCity">City</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputCity">
                                             </div>
                                         </div>
@@ -387,7 +353,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group required">
-                                                <label for="inputState">State</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputState">State</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <select id="inputState" class="form-control required">
                                                     <option>Indiana</option>
                                                     <option>Indiana</option>
@@ -401,19 +367,18 @@
                                     <div class="row">
                                         <div class="col-sm-2">
                                             <div class="form-group required">
-                                                <label for="inputZip">Zip Code</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputZip">Zip Code</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input maxlength="5" type="text" class="form-control required" id="inputZip">
                                             </div>
                                         </div>
                                     </div>
-
                                 </div> <!-- /.panel-body -->
                             </div> <!-- /.panel -->
                         </div> <!-- /.col-sm-12 -->
                     </div> <!-- /.row -->
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="#" class="btn btn-default btn-block"><i class="fa fa-plus-circle"></i> Add Time and Place</a>
+                            <a href="#" class="btn btn-default btn-block"><i class="glyphicon glyphicon-plus-sign"></i> Add Time and Place</a>
                             <br /><br />
                         </div>
                     </div>
@@ -426,7 +391,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group">
-                                                <label for="inputName">Name</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputName">Name</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputName">
                                             </div>
                                         </div>
@@ -434,7 +399,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group">
-                                                <label for="inputEmail">Email</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputEmail">Email</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputEmail">
                                             </div>
                                         </div>
@@ -442,7 +407,7 @@
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label for="inputPhone">Phone</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputPhone">Phone</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputPhone">
                                             </div>
                                         </div>
@@ -450,16 +415,16 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="form-group">
-                                                <label for="inputRegistrationURL">Registraton URL</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputRegistrationURL">Registraton URL</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputRegistrationURL">
-                                                <p class="help-block"><i class="fa fa-question-circle"></i> Remember to always start with http://</p>
+                                                <p class="help-block"><i class="glyphicon glyphicon-help-sign"></i> Remember to always start with http://</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-2">
                                             <div class="form-group">
-                                                <label for="inputCost">Cost</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputCost">Cost</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <input type="text" class="form-control required" id="inputCost">
                                             </div>
                                         </div>
@@ -477,7 +442,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group required">
-                                                <label for="inputEventType">Event Type</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputEventType">Event Type</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <select id="inputEventType" class="form-control required">
                                                     <option>Choose an Event Type</option>
                                                     <option>Type A</option>
@@ -487,14 +452,14 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-6" style="margin-top: 33px;">
-                                            <a href="#"><i class="fa fa-plus-circle"></i> Create New Event Type</a>
+                                            <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add Event Type</a>
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group required">
-                                                <label for="inputDescription">Description</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="inputDescription">Description</label>  <a href="#"><i class="glyphicon glyphicon-question-sign text-muted"></i></a>
                                                 <select id="inputDescription" class="form-control required">
                                                     <option>Load Saved Description</option>
                                                     <option>Monthly Newsletter</option>
@@ -504,7 +469,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-6" style="margin-top: 33px;">
-                                            <a href="#"><i class="fa fa-plus-circle"></i> Create New Saved Description</a>
+                                            <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add Saved Description</a>
                                         </div>
                                     </div>
 
@@ -589,22 +554,11 @@
         <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('.datetimeDay').datetimepicker({
-                    format: 'MM-DD-YYYY',
-                    showClose: true
-                });
-                $('.datetimeFrom').datetimepicker({
-                    format: 'h:mm A',
-                    showClose: true,
-                    toolbarPlacement: "bottom"
-                });
-                $('.datetimeTo').datetimepicker({
-                    format: 'h:mm A',
-                    showClose: true,
-                    toolbarPlacement: "bottom"
-                });
+                $('#datetimefrom').datetimepicker();
+                $('#datetimeto').datetimepicker();
+                $(".glyphicon-time").addClass("btn btn-primary");
             });
-        </script>
+        </script>            
 </form>
 </body>
 </html>
