@@ -25,6 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
+
     <!-- Placeholder for content added by individual pages. -->
 
 </head>
@@ -184,22 +185,42 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <!-- HEADER -->
-                            <h2>Manage Locations <a style="margin-top: -10px;" href="LocationAdd.html" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> Create New Saved Location</a></h2>
+                            <h2>Manage Descriptions <a style="margin-top: -10px;" href="DescriptionAdd.html" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> Create New Saved Description</a></h2>
 
                             <!-- LOCATION OUTPUT -->
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        <td style="width: 40%">Title</td>
-                                        <td style="width: 40%">Address</td>
+                                        <td style="width: 30%">Title</td>
+                                        <td style="width: 50%">Description</td>
                                         <td class="text-right">Controls</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!-- Record -->
                                     <tr>
-                                        <td><a href="#">Agcriculture Administration</a></td>
-                                        <td>615 West State Street<br />West Lafayette, IN <a data-toggle="tooltip" title="View your location on Google Maps" target="_blank" href="https://www.google.com/maps/search/615 west state street west lafayette in"><i class="fa fa-map-marker"></i></a></td>
+                                        <td><a href="#">Event Description</a></td>
+                                        <td>This is where the decription will appear.<br />We are limiting this space to two lines for consistency.</td>
+                                        <td class="text-right">
+                                            <!-- Split button -->
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- End Record -->
+                                    
+                                    <!-- Record -->
+                                    <tr>
+                                        <td><a href="#">Event Description 2</a></td>
+                                        <td>This is where the decription will appear.<br />We are limiting this space to two lines for consistency.</td>
                                         <td class="text-right">
                                             <!-- Split button -->
                                             <div class="btn-group">
@@ -218,8 +239,8 @@
 
                                     <!-- Record -->
                                     <tr>
-                                        <td><a href="#">HotBox Pizza</a></td>
-                                        <td>135 S Chauncey Ave<br /> West Lafayette, IN 47906 <a class="btn btn-xs btn-default" data-toggle="tooltip" title="View your location on Google Maps" target="_blank" href="https://www.google.com/maps/search/Chauncey Hill Mall, 135 S Chauncey Ave, West Lafayette, IN 47906"><i class="fa fa-map-marker"></i> Map</a></td>
+                                        <td><a href="#">Event Description 3</a></td>
+                                        <td>This is where the decription will appear.<br />We are limiting this space to two lines for consistency.</td>
                                         <td class="text-right">
                                             <!-- Split button -->
                                             <div class="btn-group">
@@ -238,8 +259,8 @@
 
                                     <!-- Record -->
                                     <tr>
-                                        <td><a href="#">Tarkington Hall</a></td>
-                                        <td>615 West State Street<br />West Lafayette, IN <a class="btn btn-xs btn-default" data-toggle="tooltip" title="View your location on Google Maps" target="_blank" href="https://www.google.com/maps/search/615 west state street west lafayette in"><i class="fa fa-map-marker"></i> Map</a></td>
+                                        <td><a href="#">Event Description 4</a></td>
+                                        <td>This is where the decription will appear.<br />We are limiting this space to two lines for consistency.</td>
                                         <td class="text-right">
                                             <!-- Split button -->
                                             <div class="btn-group">
@@ -258,8 +279,8 @@
 
                                     <!-- Record -->
                                     <tr>
-                                        <td><a href="#">Turfgrass Center</a></td>
-                                        <td>1340 Cherry Lane <br />West Lafayette, IN 47907 <a class="btn btn-xs btn-default" data-toggle="tooltip" title="View your location on Google Maps" target="_blank" href="https://www.google.com/maps/search/1340 Cherry Lane West Lafayette, IN 47907"><i class="fa fa-map-marker"></i> Map</a></td>
+                                        <td><a href="#">Event Description 5</a></td>
+                                        <td>This is where the decription will appear.<br />We are limiting this space to two lines for consistency.</td>
                                         <td class="text-right">
                                             <!-- Split button -->
                                             <div class="btn-group">
@@ -276,25 +297,8 @@
                                     </tr>
                                     <!-- End Record -->
 
-                                    <!-- Record -->
-                                    <tr>
-                                        <td><a href="#">Purdue Memorial Union</a></td>
-                                        <td>101 N Grant St <br />West Lafayette, IN 47906 <a class="btn btn-xs btn-default" data-toggle="tooltip" title="View your location on Google Maps" target="_blank" href="https://www.google.com/maps/search/101 N Grant St, West Lafayette, IN 47906"><i class="fa fa-map-marker"></i> Map</a></td>
-                                        <td class="text-right">
-                                            <!-- Split button -->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- End Record -->
+
+                                    
                                 </tbody>
                             </table>
 
