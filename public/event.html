@@ -220,9 +220,8 @@
             <!-- start of left column news feed -->
 
               <h1 class="eventsHeader">Wonderful Event</h1>
-              <br />
-              <blockquote>
-                April 1, 2015 <br />
+              <br/>
+              <blockquote>April 1, 2015 <br />
                 10:00 am to 3:15 pm EST <br />
                 615 West State Street <br />
                 West Lafayette, IN 47907
@@ -234,27 +233,48 @@
             $(document).ready(function(){
                 $(".show2").click(function(){
                     $("#icon").toggle();
+                    $("#hideDates").toggle();
+                    $("#showDates").toggle();
+
                 });
             });
             </script>
 
 
             <h5 class="showalldates" >
+            <a class="show2" style="display:none;" id="hideDates" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Hide Dates <i id="icon"class="fa fa-sort-asc"></i> </a></h5>
 
-            <a class="show2" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show All Dates <i id="icon"class="fa fa-caret-square-o-down"></i> </a></h5>
+            <h5 class="showalldates" >
+            <a class="show2"  id="showDates" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show All Dates <i id="icon" class="fa fa-fw fa-sort-desc moveUp"></i> </a></h5>
+
+            <hr style="margin-top:-17px;">
 
                   <div class="collapse" id="collapseExample">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem</p>
-                      <br />
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-                      <br />
+                      <blockquote>April 1, 2015 <br />
+                10:00 am to 3:15 pm EST <br />
+                615 West State Street <br />
+                West Lafayette, IN 47907
+              </blockquote>
+              <blockquote>May 1, 2015 <br />
+                10:00 am to 3:15 pm EST <br />
+                615 West State Street <br />
+                West Lafayette, IN 47907
+              </blockquote>
+              <blockquote>June 1, 2015 <br />
+                10:00 am to 3:15 pm EST <br />
+                615 West State Street <br />
+                West Lafayette, IN 47907
+              </blockquote>
+              <blockquote>July 1, 2015 <br />
+                10:00 am to 3:15 pm EST <br />
+                615 West State Street <br />
+                West Lafayette, IN 47907
+              </blockquote>
+          <h5 class="showalldates" >
+         <a class="show2" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Hide Dates <i id="icon"class="fa fa-caret-square-o-up"></i> </a></h5>
 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-                      <br />
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
+
                   </div>
-                <hr>
-
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Adipisci eaque neque ad repellat</a>, recusandae, sunt magni beatae quam aut molestiae velit optio! Sed odio maiores veritatis facere alias facilis perferendis cupiditate, deleniti eaque qui laudantium, ipsam recusandae enim dolor illum necessitatibus corrupti! Autem sit illo, cupiditate officiis error inventore. Omnis in rerum cupiditate mollitia illo minima culpa quis sed expedita quod magnam nostrum, placeat voluptatum, aspernatur architecto molestiae cumque doloribus unde, consectetur. Odio dignissimos harum aspernatur qui quas facilis aperiam. A rerum excepturi odio minima voluptates porro eaque ut non quidem quo amet doloribus cumque error incidunt mollitia distinctio temporibus, expedita optio quos ratione, blanditiis nisi vero numquam, commodi veniam. Suscipit hic porro accusantium, ratione fugiat molestias aperiam molestiae pariatur eveniet nulla quis sapiente eum sit sed! At, pariatur. Iure similique cumque sapiente voluptatum omnis nulla, ullam neque impedit <strong>reiciendis</strong> labore? Quo nostrum sit dicta numquam maiores mollitia, debitis, deserunt.</p>
               <br />
@@ -275,8 +295,7 @@
             <div id="ArticleCol2b">
 
             <h1 class="eventsHeader"><i class="fa fa-envelope"></i> Contact</h1>
-            <blockquote>
-              <strong>Carl Sagan</strong> <br />
+            <blockquote>Carl Sagan<br />
               <a href="mailto:astroman@purdue.edu">astroman@purdue.edu</a> <br />
               <a href="tel:217.213.5487">147.589.6872</a>
             </blockquote>

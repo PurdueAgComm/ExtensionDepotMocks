@@ -2039,8 +2039,8 @@ ul.news-list {
 }
 
 #ArticleCol1 blockquote {
-	font-size: 24px;
-	line-height: 26px;
+	font-size: 20px;
+	line-height: 22px;
 	border-left: 5px solid #a57000;
 	margin: 0 10px 10px 20px;
 }
@@ -2063,9 +2063,14 @@ ul.news-list {
 	display: none !important;
 }
 
-/* hide for mockup sake */
-.hide {
-	display: none;
+#showDates, #hideDates {
+	background-color: #fff; padding: 3px;
+}
+
+/* icons inline with text need to be middle aligned vertically */
+.moveUp {
+	position: relative;
+	top: -3px;
 }
 
 
