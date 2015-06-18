@@ -2289,7 +2289,10 @@ a[rel="external"]   {background:url('/Style%20Library/Extension/images/external.
 	}
 }
 
-
+.showalldates
+{
+	text-align: center;
+}
 
 
 /* Quicklinks style */

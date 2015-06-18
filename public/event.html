@@ -8,13 +8,15 @@
   <!-- layout style sheet -->
 
   <link rel="stylesheet" type="text/css" href="menu/css/mgmenu.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="https://extension.purdue.edu/_layouts/1033/styles/Themable/corev4.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- Load JavaScript files -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scripts.min.js"></script>
   <script type="text/javascript" src="menu/js/mgmenu.js"></script>
   <script type="text/javascript" src="menu/js/mgmenu_plugins.js"></script>
   <script type="text/javascript">
@@ -226,15 +228,34 @@
                 West Lafayette, IN 47907
               </blockquote>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-              <br />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-              <br />
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-              <br />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
-              <br />
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script>
+            $(document).ready(function(){
+                $(".show2").click(function(){
+                    $("#icon").toggle();
+                });
+            });
+            </script>
+
+
+            <h5 class="showalldates" >
+
+            <a class="show2" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show All Dates <i id="icon"class="fa fa-caret-square-o-down"></i> </a></h5>
+
+                  <div class="collapse" id="collapseExample">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem</p>
+                      <br />
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
+                      <br />
+
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
+                      <br />
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur facere, quia esse aliquid. Voluptatem!</p>
+                  </div>
+                <hr>
+
+
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Adipisci eaque neque ad repellat</a>, recusandae, sunt magni beatae quam aut molestiae velit optio! Sed odio maiores veritatis facere alias facilis perferendis cupiditate, deleniti eaque qui laudantium, ipsam recusandae enim dolor illum necessitatibus corrupti! Autem sit illo, cupiditate officiis error inventore. Omnis in rerum cupiditate mollitia illo minima culpa quis sed expedita quod magnam nostrum, placeat voluptatum, aspernatur architecto molestiae cumque doloribus unde, consectetur. Odio dignissimos harum aspernatur qui quas facilis aperiam. A rerum excepturi odio minima voluptates porro eaque ut non quidem quo amet doloribus cumque error incidunt mollitia distinctio temporibus, expedita optio quos ratione, blanditiis nisi vero numquam, commodi veniam. Suscipit hic porro accusantium, ratione fugiat molestias aperiam molestiae pariatur eveniet nulla quis sapiente eum sit sed! At, pariatur. Iure similique cumque sapiente voluptatum omnis nulla, ullam neque impedit <strong>reiciendis</strong> labore? Quo nostrum sit dicta numquam maiores mollitia, debitis, deserunt.</p>
               <br />
 
