@@ -2063,7 +2063,7 @@ ul.news-list {
 	display: none !important;
 }
 
-#showDates, #hideDates {
+#showDates, #hideDates, .show2 {
 	background-color: #fff; padding: 3px;
 }
 
