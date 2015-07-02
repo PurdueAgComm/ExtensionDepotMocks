@@ -23,6 +23,8 @@
     <!-- Font Awesome because they're much better than glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -535,8 +537,90 @@
                         </div> <!-- /.col-sm-12 -->
                     </div> <!-- /.row -->
 
-                     <a href="Events.html" class="btn btn-primary btn-lg btn-block">Create Event</a>
+
+                 <style type="text/css">
+                        .form-inset{
+                            margin: 10px;
+                        }
+                        .form-group.required label:after {
+                          content:"*";
+                          color:red;
+                        }
+
+                        .panel-title {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                        }
+
+                        .search {
+
+                            float: right;
+                            margin-top: -70px;
+                        }
+
+                        .day {
+                            font-weight: bold;
+                        }
+                    </style>
+
+                        <form class="form-inset">
+                        <div class="row">
+                            <div class="col-sm-12">
+                            <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Share Your Event</h3></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group col-xs-4">
+                                            <label for="inputLocation">Select Locations</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                            <select class="form-control " id="countiesExt" multiple="multiple">
+                                                <option value="Ext" selected>Extension</option>
+                                                <option value="Tipp" selected>Tippecanoe</option>
+                                                <option value="Adams">Adams</option>
+                                                <option value="Allen">Allen</option>
+                                                <option value="Bartholomew">Bartholomew</option>
+                                                <option value="Benton">Benton</option>
+                                                <option value="Boone">Boone</option>
+                                                <option value="Brown">Brown</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                <div class="col-sm-12">
+                                    <a href="#" class="btn btn-default"><i class="fa fa-share-alt"></i> Share to these Locations</a>
+                                    <br /><br />
+                                </div>
+                            </div>
+
+                            </div>
+
+
+
+
+
+                        </div> <!-- /.panel-body -->
+
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+
+
+                    <div>
+                         <a href="Events.html" class="btn btn-primary btn-lg btn-block">Create Event</a>
+                    </div>
+
+
                     </form>
+
+
+
+
+
+
+
+
 
                     <!-- END MOCKUP FOR EVENTADD PAGE. -->
 
@@ -616,6 +700,30 @@
             });
         </script>
         <script src="scripts/tota11y.min.js"></script>
+<!-- Scripts:  should be concatenated and minified via ant build script -->
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-multiselect.js"></script>
+        <script type="text/javascript">
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#countiesExt').multiselect({
+                    buttonWidth: '100%',
+                    dropRight: true,
+                    numberDisplayed: 1,
+                    enableFiltering: 1,
+                    enableCaseInsensitiveFiltering: true,
+                    includeSelectAllOption: 1
+                });
+            });
+        </script>
+        <script src="scripts/tota11y.min.js"></script>
+
+
+
 </form>
 </body>
 </html>
