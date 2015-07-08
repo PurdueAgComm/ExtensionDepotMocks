@@ -191,7 +191,17 @@
 
 
 
-        <div style="float: left; width: 29%; margin-right: 10px; border: 1px solid red;">
+        <div style="float: left; width: 29%; margin-right: 10px; height:100%; padding: 5px 10px 0 20px;">
+
+          <form class="form-inline search">
+          <label for="inputLocation">Search</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+            <div class="form-group">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" id="search" style="width: 205px;" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </form>
+          <br>
           <div class="form-group">
               <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
               <select class="form-control" id="countiesExt" multiple="multiple">
@@ -206,10 +216,190 @@
               </select>
 
           </div>
-        </div>
-        <div style="float: left; width: 69%; border: 1px solid green;">
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="form-group required">
+                      <label for="inputCategory">Category</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a> <br />
+                      <div style="margin-left: 20px;">
+                          <a href="#">Agriculture</a> <br />
+                          <a href="#">Community</a> <br />
+                          <a href="#">Environment</a> <br />
+                          <a href="#">Family</a> <br />
+                          <a href="#">Food</a> <br />
+                          <a href="#">Garden</a> <br />
+                          <a href="#">Youth</a> <br />
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+              <label for="dateTimeFromSelect">Start Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                  <div class="form-group">
+                      <div class="input-group date datetimefrom">
+                          <input type="text" style="width:210px;" class="form-control datetimefrom" id="dateTimeFromSelect"/>
+                          <span class="input-group-addon">
+                              <span class="fa fa-calendar"></span>
+                          </span>
+                      </div>
+                      <br />
+                    </div>
+              </div>
+            </div>
+            <br>
+             <div class="row">
+               <div class="col-sm-12">
+               <label for="dateTimeFromSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                  <div class="form-group">
+                    <div class="input-group date datetimeto">
+                        <input type='text' style="width:210px;" class="form-control datetimeto" id="dateTimeToSelect" />
+                        <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+             <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="typesExt">Type</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                        <select class="form-control" id="typesExt">
+                            <option value="1">All Types</option>
+                            <option value="1">4-H Program</option>
+                            <option value="1">Something Else</option>
+                            <option value="1">Really Pointless</option>
+                            <option value="1">Space Monkey</option>
+                        </select>
+                    </div>
+                </div>
+             </div>
 
         </div>
+
+        <h2 style=""> Extension Events</h2>
+
+        <div style="float: left; width: 69%;">
+
+           <a href=""><div class="event">
+               <hr>
+              <div class="date">
+               <p style="margin:0px;">Wed<br></p>
+               <h2 style="margin:0px;">15<br></h2>
+               <p style="margin:0px;">July</p>
+              </div>
+
+              <div style="float: left; width: 70%; padding-top:5px;">
+              <span class="label label-success">Featured</span>
+               <h4 style="margin:0px; margin-top:5px;">Wonderful Event<br> </h4>
+               <p  style="margin:0px;">West Lafayette, IN @ 6:00 PM EST</p>
+              </div>
+
+            </div></a>
+
+          <a href=""><div class="event">
+               <hr>
+              <div class="date">
+               <p style="margin:0px;">Thu<br></p>
+               <h2 style="margin:0px;">16<br></h2>
+               <p style="margin:0px;">July</p>
+              </div>
+
+              <div style="float: left; width: 70%; padding-top:5px;">
+               <p  style="margin:0px;"><br></p>
+               <h4 style="margin:0px;">Wonderful Event<br> </h4>
+               <p  style="margin:0px;">West Lafayette, IN @ 6:00 PM EST</p>
+              </div>
+
+            </div></a>
+
+           <a href=""><div class="event">
+               <hr>
+              <div class="date">
+               <p style="margin:0px;">Fri<br></p>
+               <h2 style="margin:0px;">17<br></h2>
+               <p style="margin:0px;">July</p>
+              </div>
+
+              <div style="float: left; width: 70%; padding-top:5px;">
+               <p  style="margin:0px;"><br></p>
+               <h4 style="margin:0px;">Wonderful Event<br> </h4>
+               <p  style="margin:0px;">West Lafayette, IN @ 6:00 PM EST</p>
+              </div>
+
+            </div> </a>
+
+            <a href=""><div class="event">
+               <hr>
+              <div class="date">
+               <p style="margin:0px;">Sat<br></p>
+               <h2 style="margin:0px;">18<br></h2>
+               <p style="margin:0px;">July</p>
+              </div>
+
+              <div style="float: left; width: 70%; padding-top:5px;">
+               <p  style="margin:0px;"><br></p>
+               <h4 style="margin:0px;">Wonderful Event<br> </h4>
+               <p  style="margin:0px;">West Lafayette, IN @ 6:00 PM EST</p>
+              </div>
+
+            </div> </a>
+
+            <a href=""><div class="event">
+               <hr>
+              <div class="date">
+               <p style="margin:0px;">Sun<br></p>
+               <h2 style="margin:0px;">19<br></h2>
+               <p style="margin:0px;">July</p>
+              </div>
+
+              <div style="float: left; width: 70%; padding-top:5px;">
+               <p  style="margin:0px;"><br></p>
+               <h4 style="margin:0px;">Wonderful Event<br> </h4>
+               <p  style="margin:0px;">West Lafayette, IN @ 10:00 AM EST</p>
+              </div>
+
+            </div> </a>
+
+          <hr>
+          <!-- Pagination -->
+          <div class="row">
+              <div class="col-sm-12" align="center">
+                  <ul class="pagination">
+                      <li>
+                          <a href="#" aria-label="Previous">
+                              <span aria-hidden="true">First</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                          </a>
+                      </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                          <a href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" aria-label="Previous">
+                              <span aria-hidden="true">Last</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <!-- End Pagination -->
+        </div>
+
 
 
         </div>
@@ -332,26 +522,15 @@ Purdue University is an Affirmative Action institution.  This material may be av
         <link rel="stylesheet" href="../css/bootstrap-multiselect.css" type="text/css"/>
         <script type="text/javascript">
             $(function () {
-                $('.datetimeDay').datetimepicker({
+                $('.datetimefrom').datetimepicker({
                     format: 'MM-DD-YYYY',
                     showClose: true
                 });
-                $('.datetimeFrom').datetimepicker({
-                    format: 'h:mm A',
-                    showClose: true,
-                    toolbarPlacement: "bottom"
-                });
-                $('.datetimeTo').datetimepicker({
-                    format: 'h:mm A',
-                    showClose: true,
-                    toolbarPlacement: "bottom"
+                $('.datetimeto').datetimepicker({
+                    format: 'MM-DD-YYYY',
+                    showClose: true
                 });
             });
-        </script>
-        <!-- Scripts:  should be concatenated and minified via ant build script -->
-
-
-        <script type="text/javascript">
             $(function () {
               $('[data-toggle="tooltip"]').tooltip()
             })
