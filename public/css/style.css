@@ -2348,3 +2348,24 @@ float: left; text-align:center; width: 15%; margin-top: 5px;
 .featured{
 	float: left; margin-top: 25px;
 }
+
+
+.sideevent{
+	float: left;
+	width: 100%;
+	min-height: 50px;
+    border-bottom: 1px solid #d2d2d2;
+
+
+}
+.sideevent:hover{
+	background-color: #f7f7f7;
+}
+
+.sidedate{
+float: left; text-align:center; width: 15%; margin-top: 5px; margin-bottom: 5px;
+}
+
+.sideeventdata{
+  float: left; width: 70%; margin:0; padding-bottom: 10px;
+}
