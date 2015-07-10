@@ -2018,7 +2018,7 @@ ul.news-list {
 	border-bottom:1px #a7582b solid;
 	line-height:1.1em;
 	padding-top:.5em;
-	margin: 0 10px 10px 10px;
+	margin: 0 10px 0 10px;
 }
 
 .NewsFeed .NewsFeedTitle {
@@ -2355,11 +2355,13 @@ float: left; text-align:center; width: 15%; margin-top: 5px;
 	width: 100%;
 	min-height: 50px;
     border-bottom: 1px solid #d2d2d2;
+    padding-top:5px;
 
 
 }
 .sideevent:hover{
 	background-color: #f7f7f7;
+
 }
 
 .sidedate{
@@ -2367,5 +2369,32 @@ float: left; text-align:center; width: 15%; margin-top: 5px; margin-bottom: 5px;
 }
 
 .sideeventdata{
-  float: left; width: 70%; margin:0; padding-bottom: 10px;
+  float: left; width: 80%; margin:0; padding-bottom: 10px;
+}
+
+.time, .place{
+	padding: 0;
+	margin: 0;
+	color: black;
+}
+.eventtitle{
+	margin:0; margin-top:12px;
+}
+.featuredeventtitle{
+	 margin:0; margin-top:10px;
+}
+
+.canceled {
+	background-color: #ebcccc;
+}
+
+.cancelednohover {
+	background-color: #ebcccc;
+}
+.canceled:hover{
+	background-color: #ebc2c2;
+}
+
+.cancellabel{
+	margin-left: 20px;
 }
