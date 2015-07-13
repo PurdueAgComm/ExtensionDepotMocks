@@ -2398,3 +2398,7 @@ float: left; text-align:center; width: 15%; margin-top: 5px; margin-bottom: 5px;
 .cancellabel{
 	margin-left: 20px;
 }
+
+.pastevent {
+	background-color: #e1e1e1;
+}
