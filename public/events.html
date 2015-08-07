@@ -192,7 +192,7 @@
 
 
         <div style="float: left; width: 29%; margin-right: 10px; height:100%; padding: 5px 10px 0 20px;">
-
+        <!-- Removed
           <form class="form-inline search">
           <label for="inputLocation">Search</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
             <div class="form-group">
@@ -201,9 +201,11 @@
             </div>
             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
           </form>
+
+          -->
           <br>
           <div class="form-group">
-              <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+              <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted" data-toggle="tooltip" data-placement="right" title="Tooltip info goes here"></i></a><br />
               <select class="form-control" id="countiesExt" multiple="multiple">
                   <option value="Ext" selected>Extension</option>
                   <option value="Tipp" selected>Tippecanoe</option>
@@ -216,6 +218,8 @@
               </select>
 
           </div>
+
+          <!-- Removed
            <div class="form-group">
               <label for="inputLocation">Category</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
               <select class="form-control" id="countiesExt2" multiple="multiple">
@@ -228,11 +232,11 @@
                   <option value="Youth">Youth</option>
               </select>
 
-          </div>
+          </div> -->
 
             <div class="row">
               <div class="col-sm-12">
-              <label for="dateTimeFromSelect">Start Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+              <label for="dateTimeFromSelect">Start Date</label> <a href="#"><i class="fa fa-question-circle text-muted"data-toggle="tooltip" data-placement="right" title="Tooltip info goes here"></i></a>
                   <div class="form-group">
                       <div class="input-group date datetimefrom">
                           <input type="text" style="width:210px;" class="form-control datetimefrom" id="dateTimeFromSelect"/>
@@ -247,7 +251,7 @@
             <br>
              <div class="row">
                <div class="col-sm-12">
-               <label for="dateTimeFromSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+               <label for="dateTimeFromSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted" data-toggle="tooltip" data-placement="right" title="Tooltip info goes here"></i></a>
                   <div class="form-group">
                     <div class="input-group date datetimeto">
                         <input type='text' style="width:210px;" class="form-control datetimeto" id="dateTimeToSelect" />
@@ -263,7 +267,7 @@
              <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <label for="typesExt">Type</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                        <label for="typesExt">Type</label> <a href="#"><i class="fa fa-question-circle text-muted" data-toggle="tooltip" data-placement="right" title="Tooltip info goes here"></i></a>
                         <select class="form-control" id="typesExt">
                             <option value="1">All Types</option>
                             <option value="1">4-H Program</option>
@@ -275,6 +279,13 @@
                 </div>
              </div>
 
+
+        <button type="button" id="myButton1" Title="Find Events" class="btn btn-block btn-primary"> <i class="fa fa-filter"></i> Find Events </button>
+        <br />
+        <button type="button" id="myButton2" Title="Reset Filters" class="btn btn-block btn-default"> <i class="fa fa-refresh"></i> Reset Filters</button>
+
+
+
         </div>
 
 
@@ -285,12 +296,12 @@
               <div class="date">
                <p style="margin:0;">Wed<br></p>
                <h2 style="margin:0;">15<br></h2>
-               <p style="margin:0;">July</p>
+               <p style="margin:0;">Jul</p>
               </div>
 
               <div class="eventdata">
                <h4 style="margin:0;">Wonderful Event that is really long long long long long long  long long long long long long long long long long long long long and goes on and on and on... </h4>
-               <p  style="margin:0;">West Lafayette, IN @ 6:00 PM EST</p>
+               <p  style="margin:0;">West Lafayette, IN <br />6:00 PM EST</p>
                 </div>
 
               <div class="featured">
@@ -303,12 +314,12 @@
               <div class="date">
                <p style="margin:0;">Thu<br></p>
                <h2 style="margin:0;">16<br></h2>
-               <p style="margin:0;">July</p>
+               <p style="margin:0;">Jul</p>
               </div>
 
               <div class="eventdata">
-               <h4 style="margin:0;">Wonderful Event </h4>
-               <p  style="margin:0;">West Lafayette, IN @ 6:00 PM EST</p>
+               <h4 style="margin:0;">All Day Event </h4>
+               <p  style="margin:0;">West Lafayette, IN <br />All Day</p>
               </div>
 
               <div class="featured">
@@ -322,12 +333,12 @@
               <div class="date">
                <p style="margin:0;">Sat<br></p>
                <h2 style="margin:0;">18<br></h2>
-               <p style="margin:0;">July</p>
+               <p style="margin:0;">Jul</p>
               </div>
 
               <div class="eventdata">
                <h4 style="margin:0;">Wonderful Event</h4>
-               <p  style="margin:0;">West Lafayette, IN @ 6:00 PM EST</p>
+               <p  style="margin:0;">West Lafayette, IN <br />6:00 PM EST</p>
               </div>
 
               <div class="featured">
@@ -341,16 +352,111 @@
               <div class="date">
                <p style="margin:0;">Sun<br></p>
                <h2 style="margin:0;">19<br></h2>
-               <p style="margin:0;">July</p>
+               <p style="margin:0;">Jul</p>
               </div>
 
               <div class="eventdata">
               <span class="label label-success"></span>
                <h4 style="margin:0;">Wonderful Event</h4>
-               <p  style="margin:0;">West Lafayette, IN @ 10:00 AM EST</p>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
               </div>
 
             </div> </a>
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Sun<br></p>
+               <h2 style="margin:0;">20<br></h2>
+               <p style="margin:0;">Aug</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Mon<br></p>
+               <h2 style="margin:0;">21<br></h2>
+               <p style="margin:0;">Aug</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Sun<br></p>
+               <h2 style="margin:0;">22<br></h2>
+               <p style="margin:0;">Sept</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Sun<br></p>
+               <h2 style="margin:0;">23<br></h2>
+               <p style="margin:0;">Oct</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Tue<br></p>
+               <h2 style="margin:0;">24<br></h2>
+               <p style="margin:0;">Nov</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+
+            <a href=""><div class="event">
+
+              <div class="date">
+               <p style="margin:0;">Mon<br></p>
+               <h2 style="margin:0;">25<br></h2>
+               <p style="margin:0;">Dec</p>
+              </div>
+
+              <div class="eventdata">
+              <span class="label label-success"></span>
+               <h4 style="margin:0;">Wonderful Event</h4>
+               <p  style="margin:0;">West Lafayette, IN <br />10:00 AM CT</p>
+              </div>
+
+            </div> </a>
+
+
           <!-- Pagination -->
           <div class="row">
               <div class="col-sm-12" align="center">
