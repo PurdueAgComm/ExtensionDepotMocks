@@ -207,7 +207,7 @@
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="form-group">
-                                                            <label for="inputLocation">Location</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                            <label for="inputLocation">Home</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
                                                             <select class="form-control" id="countiesExt" multiple="multiple">
                                                                 <option value="Ext" selected>Extension</option>
                                                                 <option value="Tipp" selected>Tippecanoe</option>
@@ -222,70 +222,24 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="form-group required">
-                                                            <label for="inputCategory">Category</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a> <br />
-                                                            <div style="margin-left: 20px;">
-                                                                <a href="#">Agriculture</a> <br />
-                                                                <a href="#">Community</a> <br />
-                                                                <a href="#">Environment</a> <br />
-                                                                <a href="#">Family</a> <br />
-                                                                <a href="#">Food</a> <br />
-                                                                <a href="#">Garden</a> <br />
-                                                                <a href="#">Youth</a> <br />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="form-group">
                                                             <label for="dateTimeFromSelect">Start Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date datetimefrom">
+                                                            <div class="datetimefrom">
                                                                 <input type="text" class="form-control datetimefrom" id="dateTimeFromSelect"/>
-                                                                <span class="input-group-addon">
-                                                                    <span class="fa fa-calendar"></span>
-                                                                </span>
                                                             </div>
                                                             <br />
-                                                            <label for="dateTimeFromSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
-                                                            <div class="input-group date datetimeto">
+                                                            <label for="dateTimeToSelect">End Date</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
+                                                            <div class="date datetimeto">
                                                                 <input type='text' class="form-control datetimeto" id="dateTimeToSelect" />
-                                                                <span class="input-group-addon">
-                                                                    <span class="fa fa-calendar"></span>
-                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!--
-                                                    <div class="col-sm-1">
-                                                    -
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div class="form-group">
-                                                            <label>&nbsp;</label>
-
-                                                        </div>
-                                                    </div>
-                                                    -->
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="typesExt">Type</label> <a href="#"><i class="fa fa-question-circle text-muted"></i></a>
-                                                        <select class="form-control" id="typesExt">
-                                                            <option value="1">All Types</option>
-                                                            <option value="1">4-H Program</option>
-                                                            <option value="1">Something Else</option>
-                                                            <option value="1">Really Pointless</option>
-                                                            <option value="1">Space Monkey</option>
-                                                        </select>
-                                                    </div>
                                                 </div>
-                                            </div>
+
+
                                             </div> <!-- /.panel-body -->
                                         </div> <!-- /.panel -->
                                     </div> <!-- /.col-sm-12 -->
@@ -302,6 +256,10 @@
                                 </div>
                                 <button type="submit" class="btn btn-default">Search</button>
                             </form>
+
+                            <div class="alert alert-info">
+                                <i class="fa fa-info-circle"></i> Controls have been disabled because you have multiple homes selected.
+                            </div>
 
                             <!-- Date/Event Pagination -->
                             <h3 class="day">May 30, 2015</h3>
@@ -349,6 +307,20 @@
                                             <!-- Split button -->
                                             <button type="button" class="btn btn-default"><i class="fa fa-check"></i> Accept</button>
                                             <button type="button" class="btn btn-default"><i class="fa fa-times"></i> Reject</button>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#"><i class="fa fa-thumb-tack"></i> Pin</a></li>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> Share</a></li>
+                                                    <li><a href="#"><i class="fa fa-copy"></i> Copy</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <!-- End Record -->
@@ -385,7 +357,7 @@
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        <td style="width: 5%;">Status</td>
+                                        <td style="width: 11%;">Status</td>
                                         <td>Title</td>
                                         <td>Start</td>
                                         <td class="text-right">Controls</td>
@@ -418,9 +390,9 @@
                                     <!-- End Record -->
 
                                     <!-- Record -->
-                                    <tr>
-                                        <td><i  data-toggle="tooltip" data-placement="left" title="This event has been shared with you." class="fa fa-share-alt"></i> <i  data-toggle="tooltip" data-placement="left" title="This event is pinned to your event list." class="fa fa-thumb-tack"></i></td>
-                                        <td><a href="#">Pushed State Event</a></td>
+                                    <tr class="danger">
+                                        <td><i  data-toggle="tooltip" data-placement="left" title="This event has been shared with you." class="fa fa-share-alt"></i> <i  data-toggle="tooltip" data-placement="left" title="This event is pinned to your event list." class="fa fa-thumb-tack"></i> <i  data-toggle="tooltip" data-placement="left" title="This event time has been canceled." class="fa fa-ban"></i></td>
+                                        <td><a href="#">Pushed Canceled State Event</a></td>
                                         <td>4:05 PM</td>
                                         <td class="text-right"><!-- Counties would have no control over State pushed events, so no controls appear--></td>
                                     </tr>
