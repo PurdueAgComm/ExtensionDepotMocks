@@ -18,7 +18,6 @@
     <!-- Main Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-switch.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/redmond/jquery-ui.css" />
     <!-- Font Awesome because they're much better than glyphicons -->
@@ -187,7 +186,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <!-- HEADER -->
-                            <h2>Manage Featured Articles <a style="margin-top: -10px;" href="pinned-4.html" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> Feature New Article</a></h2>
+                            <h2>Manage Featured Articles <a style="margin-top: -10px;" href="#" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> Feature New Article</a></h2>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus facere nisi temporibus nostrum beatae, vitae, dolores alias ullam, atque asperiores dignissimos in nam tempora voluptates repellendus enim blanditiis est mollitia saepe. Dolores, velit et?</p>
 
@@ -199,18 +198,39 @@
                                     <div class="list-group-item" style="height: 125px;">
                                         2.
                                     </div>
-                                    <div class="list-group-item" style="height: 100px;">
+                                    <div class="list-group-item" style="height: 125px;">
                                         3.
+                                    </div>
+                                    <div  class="list-group-item list-group-item-danger" style="height: 100px;">
+                                        <i data-container="body" data-toggle="tooltip" title="This item will no longer be featured" class="fa fa-times-circle"></i>
                                     </div>
                             </div>
                             </div>
                             <div class="col-xs-11">
                                 <!-- List with handle -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">[Newly Added] Winter warmth could lead to more sheep and goat parasites</a></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="form-inline">
+                                            <div class="form-group form-group-sm">
+                                                <label class="sr-only control-label" for="dateTimeFromSelect">Expiration Date</label>
+                                                <div class="col-sm-10 input-group date datetimeDay3">
+                                                    <input required placeholder="Expiration Date" type="text" class="input-sm form-control datetimeDay3"/>
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div> <!-- /.panel panel-body -->
+
                                 <div id="listWithHandle">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <a style="margin-top: -7px;" href="#" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
-                                            <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">2016 Indiana Tree Farm Landowners Clinic March...</a></h3>
+                                            <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">2016 Indiana Tree Farm Landowners Clinic March 18th-19th</a></h3>
                                         </div>
                                         <div class="panel-body">
                                             <form class="form-inline">
@@ -223,15 +243,12 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <input type="radio" name="featureAll" data-radio-all-off="true" data-on-text="Global On" data-off-text="Global Off">
-                                                <i data-toggle="tooltip" data-placement="right" title="You may feature one item globally throughout Extension. To globally feature, select 'Global On' for the item you want. If an item is already selected and you globally feature another item, it will remove the previous item." class="fa fa-question-circle"></i>
                                             </form>
                                         </div>
                                     </div> <!-- /.panel panel-body -->
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <a style="margin-top: -7px;" href="#" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
                                             <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">Purdue offers workshop on family business management</a></h3>
                                         </div>
                                         <div class="panel-body">
@@ -245,39 +262,25 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <input type="radio" name="featureAll" checked data-radio-all-off="true" data-on-text="<i class='fa fa-check'></i>" data-off-text="Global Off">
-                                                <i data-toggle="tooltip" data-placement="right" title="You may feature one item globally throughout Extension. To globally feature, select 'Global On' for the item you want. If an item is already selected and you globally feature another item, it will remove the previous item." class="fa fa-question-circle"></i>
                                             </form>
                                         </div>
                                     </div> <!-- /.panel panel-body -->
 
-                                    <div class="panel panel-default">
+                                    <div class="panel panel-danger">
                                         <div class="panel-heading">
-                                            <a style="margin-top: -7px;" href="#" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i> Remove Feature</a>
                                             <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">Workshop: Get the most out of your woods</a></h3>
                                         </div>
                                         <div class="panel-body">
-                                            <form class="form-inline">
-                                                <div class="form-group form-group-sm">
-                                                    <label class="sr-only control-label" for="dateTimeFromSelect">Expiration Date</label>
-                                                    <div class="col-sm-10 input-group date datetimeDay3">
-                                                        <input required placeholder="Expiration Date" type="text" class="input-sm form-control datetimeDay3"/>
-                                                        <span class="input-group-addon">
-                                                            <span class="fa fa-calendar"></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <input type="radio" name="featureAll" data-radio-all-off="true" data-on-text="<i class='fa fa-check'></i>" data-off-text="Global Off">
-                                                <i data-toggle="tooltip" data-placement="right" title="You may feature one item globally throughout Extension. To globally feature, select 'Global On' for the item you want. If an item is already selected and you globally feature another item, it will remove the previous item." class="fa fa-question-circle"></i>
-                                            </form>
+                                            <p>This item will no longer be featured on your homepage.</p>
                                         </div>
                                     </div> <!-- /.panel panel-body -->
+
 
                                 </div><!-- /#listWithHandle -->
                             </div> <!-- /.col-xs-11 -->
                         </div> <!-- /.col-xs-8 -->
                     </div> <!-- /.row -->
-                    <a class="btn btn-primary btn-lg btn-block">Save Changes</a>
+                    <a href="pinned.html" class="btn btn-primary btn-lg btn-block">Save Changes</a>
                     <!-- END MOCKUP FOR PINNED PAGE. -->
     <div id="ctl00_MainContentPlaceHolder_contactDiv">
 
@@ -353,12 +356,6 @@
                     format: 'MM-DD-YYYY',
                     showClose: true
                 });
-            });
-        </script>
-        <script type="text/javascript" src="scripts/bootstrap-switch.min.js"></script>
-        <script>
-            $("[name='featureAll']").bootstrapSwitch({
-                state: false
             });
         </script>
         <script src="scripts/tota11y.min.js"></script>
