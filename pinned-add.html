@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <!-- Placeholder for content added by individual pages. -->
 
@@ -203,7 +202,7 @@
                                     <div class="list-group-item" style="height: 125px;">
                                         2.
                                     </div>
-                                    <div class="list-group-item" style="height: 115px;">
+                                    <div class="list-group-item" style="height: 100px;">
                                         3.
                                     </div>
                             </div>
@@ -211,10 +210,10 @@
                             <div class="col-xs-11">
                                 <!-- List with handle -->
                                 <div id="listWithHandle">
-                                    <div class="panel panel-default">
+                                    <div class="panel panel-default moveable">
                                         <div class="panel-heading">
-                                            <a style="margin-top: -7px;" href="#" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
-                                            <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">2016 Indiana Tree Farm Landowners Clinic March...</a></h3>
+                                            <a style="margin-top: -7px;" href="pinned-add.html" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
+                                            <h3 class="panel-title"><span class="fa fa-arrows" aria-hidden="true"></span> <a href="http://google.com">2016 Indiana Tree Farm Landowners Clinic March...</a></h3>
                                         </div>
                                         <div class="panel-body">
                                             <form class="form-inline">
@@ -234,10 +233,10 @@
                                         </div>
                                     </div> <!-- /.panel panel-body -->
 
-                                    <div class="panel panel-default">
+                                    <div class="panel panel-default moveable">
                                         <div class="panel-heading">
-                                            <a style="margin-top: -7px;" href="#" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
-                                            <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="#">Purdue offers workshop on family business management</a></h3>
+                                            <a style="margin-top: -7px;" href="pinned-add.html" class="pull-right btn btn-default"><i class="fa fa-times-circle"></i>  Remove Feature</a>
+                                            <h3 class="panel-title"><span class="fa fa-arrows moveable" aria-hidden="true"></span> <a href="http://google.com">Purdue offers workshop on family business management</a></h3>
                                         </div>
                                         <div class="panel-body">
                                             <form class="form-inline">
@@ -257,7 +256,6 @@
                                         </div>
                                     </div> <!-- /.panel panel-body -->
                                 </div><!-- /#listWithHandle -->
-                                <!-- THIS IS THE END OF THE MOVABLE CONTAINER THE EMPTY STATE FOLLOWS -->
                                 <div class="panel panel-info" style="opacity: .5">
                                     <div class="panel-heading">
                                         <h3 class="panel-title"><span class="fa fa-plus-circle" aria-hidden="true"></span> <a href="#" data-toggle="modal" data-target="#addFeature">Add Feature</a></h3>
@@ -266,8 +264,6 @@
                                         <p><a href="#" data-toggle="modal" data-target="#addFeature">You can add up to three features.</p>
                                     </div>
                                 </div> <!-- /.panel panel-body -->
-
-
                             </div> <!-- /.col-xs-11 -->
                         </div> <!-- /.col-xs-8 -->
                     </div> <!-- /.row -->
@@ -363,7 +359,6 @@
         <script>
             // List with handle
             Sortable.create(listWithHandle, {
-              handle: '.fa-arrows',
               animation: 300,
             });
             // to set maxDate view documentation here https://eonasdan.github.io/bootstrap-datetimepicker/Functions/#date
@@ -376,6 +371,10 @@
     .modal-body {
         max-height: calc(100vh - 212px);
         overflow-y: auto;
+    }
+
+    .ui-effects-wrapper {
+        display: inline;
     }
 </style>
 
@@ -497,6 +496,11 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<script>
+$("#shakeItOff").click(function() {
+  $( ".shake" ).effect('shake', {distance:5} );
+});
+</script>
 </body>
 </html>
 
