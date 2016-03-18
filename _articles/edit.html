@@ -224,7 +224,7 @@
                                             <div class="form-group required">
                                                 <label for="inputHome">Home</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
                                                 <select id="inputHome" class="form-control required">
-                                                    <option>Select a Home</option>
+                                                    <option>Select Home</option>
                                                     <option value="PE">Purdue Extension</option>
                                                     <option value="Adams">Adams</option>
                                                     <option value="Allen">Allen</option>
@@ -242,7 +242,7 @@
                                             <div class="form-group required">
                                                 <label for="inputHome">Author</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a> <div class="label label-info">Typeahead discussion</div>
                                                 <select id="inputHome" class="form-control required">
-                                                    <option>Select an Author</option>
+                                                    <option>Select Author</option>
                                                     <option value="PE">Purdue Extension</option>
                                                     <option value="Adams">Adams</option>
                                                     <option value="Allen">Allen</option>
@@ -308,7 +308,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group required">
-                                                <label for="dateTimeFromSelect">Summary Blurb</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <label for="dateTimeFromSelect">Introduction Blurb</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
                                                 <div class="input-group date">
                                                     <textarea cols="120" rows="5" class="form-control"></textarea>
                                                 </div>
@@ -353,7 +353,7 @@
                                 </div> <!-- /.panel-body -->
                             </div> <!-- /.panel -->
                             <div>
-                                <a href="Events.html" class="btn btn-primary btn-lg btn-block">Save Event</a> </br>
+                                <a href="Events.html" class="btn btn-primary btn-lg btn-block">Save Article</a> </br>
                             </div>
                         </div> <!-- /.col-sm-12 -->
                     </div> <!-- /.row -->
@@ -364,6 +364,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3 class="panel-title">Categories & Subcategories</h3></div>
                                 <div class="panel-body">
+                                    <div class="alert alert-info">Analogous with events cat/sub cat</div>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
@@ -433,6 +434,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3 class="panel-title">Share Your Event</h3></div>
                                 <div class="panel-body">
+                                    <div class="alert alert-info">Analogous with events share</div>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
@@ -459,10 +461,262 @@
                         </div> <!-- /.col-sm-12 -->
                     </div> <!-- /.row -->
 
-                    <div class="label label-danger">Lables</div>
-                    <div class="label label-danger">Files</div>
-                    <div class="label label-danger">Images</div>
-                    <div class="label label-danger">Video</div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Manage Labels</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="inputLocation">Select Labels</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                <select class="form-control" id="countiesExt" multiple="multiple">
+                                                    <option value="Ext">Extension</option>
+                                                    <option value="Adams">Adams</option>
+                                                    <option value="Allen">Allen</option>
+                                                    <option value="Bartholomew">Bartholomew</option>
+                                                    <option value="Benton">Benton</option>
+                                                    <option value="Boone">Boone</option>
+                                                    <option value="Brown">Brown</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <a href="#" class="btn btn-default"><i class="fa fa-save"></i> Save Labels</a>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <!-- did you catch the 5px margin bottom change? -->
+                                    <p style="margin-bottom: 5px;"><strong>Current Labels</strong></p>
+
+                                    <span class="badge" style="padding: 7px;">Musicals &nbsp;&nbsp;<a style="color: white;" href="#"><i class="fa fa-times-circle"></i></a></span>
+                                    <span class="badge" style="padding: 7px;">4-H Nuclear Physics &nbsp;&nbsp;<a style="color: white;" href="#"><i class="fa fa-times-circle"></i></a></span>
+                                    <span class="badge" style="padding: 7px;">Potent Potables &nbsp;&nbsp;<a style="color: white;" href="#"><i class="fa fa-times-circle"></i></a></span>
+                                    <span class="badge" style="padding: 7px;">4-H Quantum Physics &nbsp;&nbsp;<a style="color: white;" href="#"><i class="fa fa-times-circle"></i></a></span>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Manage Files</h3></div>
+                                <div class="panel-body">
+                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload File</i></a>
+                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</td>
+                                                <th>Description</td>
+                                                <th style="text-align: right; width: 10%;">Controls</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#">jeffIsPurduePete.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><a href="#">listOfMusicalReferencesJoanMentioned5791.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><a href="#">OsmarsBracket.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, accusamus, placeat.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Manage Images</h3></div>
+                                <div class="panel-body">
+                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload Image</i></a>
+                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+
+                                    <!-- MAX WIDTH OF IMAGE IS 100 -->
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Image</td>
+                                                <th>Caption</td>
+                                                <th style="text-align: right; width: 10%;">Controls</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img style="max-width: 100px;" src="https://dev.extension.purdue.edu/depot/image.ashx?ImageID=6030"></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><img style="max-width: 100px;" src="https://dev.extension.purdue.edu/depot/image.ashx?ImageID=6032"></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><img style="max-width: 100px;" src="https://dev.extension.purdue.edu/depot/image.ashx?ImageID=6030"></td>
+                                                <td>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, accusamus, placeat.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Manage Videos</h3></div>
+                                <div class="panel-body">
+                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload Video</i></a>
+                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</td>
+                                                <th>Description</td>
+                                                <th style="text-align: right; width: 10%;">Controls</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#">jeffIsPurduePete.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><a href="#">listOfMusicalReferencesJoanMentioned5791.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td><a href="#">OsmarsBracket.pdf</a></td>
+                                                <td>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, accusamus, placeat.</td>
+                                                <td style="text-align: right;"><!-- Split button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#"><i class="fa fa-minus-circle"></i> Remove from Article</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
 
                     </form>
 
