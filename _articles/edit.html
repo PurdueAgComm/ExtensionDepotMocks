@@ -1,0 +1,556 @@
+<!doctype html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head id="ctl00_Head1"><meta charset="utf-8" /><title>
+    The Extension Depot
+</title><meta name="description" />
+
+    <!-- Mobile viewport optimization h5bp.com/ad -->
+    <meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="320" /><meta name="viewport" content="width=device-width" />
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- Main Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/redmond/jquery-ui.css" />
+    <!-- Font Awesome because they're much better than glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <!-- Placeholder for content added by individual pages. -->
+
+</head>
+
+<body>
+        <div id="wrapper" >
+
+            <!-- #container -->
+            <div id="container">
+                <!-- Page header -->
+                <header>
+                    <a href="http://www.purdue.edu" title="Purdue University" target="_blank">
+                        <img id="ctl00_Image1" class="logo" src="images/ExtensionBranding.jpg" />
+                    </a>
+
+                    <h1 id="siteTitle">
+                        <a id="ctl00_HyperLink1" title="The Extension Depot" href="Default.aspx">The Extension Depot</a>
+                    </h1>
+
+                    <div id="HelpPagePacement">
+                        <a id="helpLink" href="javascript:SetHelpDocument('articleID=ExtensionDepot_DefaultHelpPage')" title="Help"><img id="ctl00_HelpImg" src="images/help.png" alt="Help " style="padding-bottom:3px;" /> Help</a>
+                    </div>
+                </header>
+
+                <!-- Top navigation -->
+                <nav id="nav">
+                    <ul id="ctl00_navUl">
+                        <!-- Log out -->
+                        <li id="ctl00_logoutBtn" class="right">
+                            <a id="ctl00_LinkButton1" title="Log out of the system" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)">Logout</a>
+                        </li>
+
+                        <!--<li class="right">
+                            <a id="ctl00_navHomeAdmin" title="Home Admin tools" href="StaticContentListing.aspx">Home Admin</a>
+                        </li>-->
+
+                        <li id="ctl00_navLIDefault" class="right ">
+                            <a id="ctl00_navDefault" title="Default" href="Default.aspx">Default</a>
+                        </li>
+
+
+                        <li id="ctl00_navLIReports" class="right adminMenu">
+                            <a href="#" title="Reports">Reports</a>
+                            <ul>
+                                <li><a href="reportItemCount.aspx" title="All Item Count Report">All Item Count Report</a></li>
+                                <li><a href="HomeContentCount.aspx" title="Home Item Count Report">Home Item Count Report</a></li>
+                                <li><a href="reportAuthorCount.aspx" title="Author Item Count Report">Author Item Count Report</a></li>
+                            </ul>
+                        </li>
+
+                        <li id="ctl00_navLINavigation" class="right adminMenu">
+                            <!-- <a id="ctl00_navNavigation" title="Navigation" href="HomeNavigation.aspx">Navigation</a> -->
+                            <a href="#" title="Navigation">Navigation</a>
+
+                            <ul>
+                                <li>
+                                    <a href="HomeNavigation.aspx" id="ctl00_navAHomeNavigation" title="Home Navigation">Home Navigation</a>
+                                </li>
+                                <li>
+                                    <a href="RelevantLinks.aspx" id="ctl00_navRelevantLinks" title="Additional Resources">Additional Resources</a>
+                                </li>
+                                <li style="text-align:center;">-----------------------</li>
+                                <li>
+                                    <a href="GroupNavigation.aspx" id="ctl00_navAGroupNavigation" title="Group Navigation">Group Navigation</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="ctl00_navLIStaticContent" class="right adminMenu">
+                            <a id="ctl00_navStaticContent" title="Static Content" href="StaticContentListing.aspx">Static Content</a>
+
+                            <ul>
+                                <li>
+                                    <a href="StaticContentListing.aspx" title="My Static Content">My Static Content</a>
+                                </li>
+                                <li>
+                                    <a href="StaticContent.aspx" title="Add Static Item">Add Static Content</a>
+                                </li>
+                                <li>
+                                    <a href="StaticContentArchive.aspx" title="Static Content Trashbin">Static Content Trashbin</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="ctl00_navLIMyContent" class="right">
+                            <a id="ctl00_navMyContent" title="My Content" href="ContentListing.aspx">My Content</a>
+
+                            <ul>
+                                <li>
+                                    <a href="ContentListing.aspx" title="My Content">My Content Items</a>
+                                </li>
+                                <li>
+                                    <a href="ContentHomeListing.aspx" title="My Content">My Home Content Items</a>
+                                </li>
+                                <li>
+                                    <a href="ContentItem.aspx" title="Add Content Item">Add Content Item</a>
+                                </li>
+                                <li>
+                                    <a href="ContentArchive.aspx" title="Content Item Trashbin">Content Item Trashbin</a>
+                                </li>
+                                <li style="text-align:center;">-----------------------</li>
+                                <li>
+                                    <a href="FileListing.aspx" title="My Files">My Files</a>
+                                </li>
+                                <li>
+                                    <a href="FileArchive.aspx" title="My Files Trashbin">My Files Trashbin</a>
+                                </li>
+                                <li style="text-align:center;">-----------------------</li>
+                                <li>
+                                    <a href="ImageListing.aspx" title="My Images">My Images</a>
+                                </li>
+                                <li>
+                                    <a href="ImageArchive.aspx" title="My Images Trashbin">My Images Trashbin</a>
+                                </li>
+                                <li style="text-align:center;">-----------------------</li>
+                                <li>
+                                    <a href="VideoListing.aspx" title="My Videos">My Videos</a>
+                                </li>
+                                <li>
+                                    <a href="VideoArchive.aspx" title="My Videos Trashbin">My Videos Trashbin</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Info -->
+                        <li id="navUserInfo">
+                            <span id="ctl00_menuUsernameLbl">Luke Skywalker</span>
+
+
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Message list -->
+                <div id="messages" class="messageContent"></div>
+
+                <!-- Proxy Controls -->
+
+
+                <!-- Main Content -->
+                <div id="main" role="main">
+                    <!-- BEGIN MOCKUP FOR EVENTADD PAGE. -->
+                    <style type="text/css">
+                        .form-inset{
+                            margin: 10px;
+                        }
+                        .form-group.required label:after {
+                          content:"*";
+                          color:red;
+                        }
+
+                        .panel-title {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                        }
+
+                        .subHeading {
+                            margin-left: 10px;
+                            font-weight: bold;
+                            border-bottom: 1px solid #dadada;
+                            width:97%;
+                        }
+                    </style>
+
+                    <h2>Edit Article</h2>
+                    <form class="form-inset">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">General Information</h3></div>
+                                <div class="panel-body">
+                                    <div class="form-group required">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group required">
+                                                    <label for="inputTitle">Title</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                    <input type="text" class="form-control required" id="inputTitle">
+                                                    <!--
+                                                    #### ERROR BLOCK
+                                                        Errors will be wraped in .help-block
+                                                        Inline style
+                                                        Prefaced with Icon fa-warning
+                                                    ####
+                                                    -->
+                                                    <p class="help-block"  style="color:#a94442">
+                                                        <i class="fa fa-warning"></i> This is error text example
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label for="inputHome">Home</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <select id="inputHome" class="form-control required">
+                                                    <option>Select a Home</option>
+                                                    <option value="PE">Purdue Extension</option>
+                                                    <option value="Adams">Adams</option>
+                                                    <option value="Allen">Allen</option>
+                                                    <option value="Bartholomew">Bartholomew</option>
+                                                    <option value="Benton">Benton</option>
+                                                    <option value="Boone">Boone</option>
+                                                    <option value="Brown">Brown</option>
+                                                    <option value="3">All Other Counties...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label for="inputHome">Author</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <select id="inputHome" class="form-control required">
+                                                    <option>Select an Author</option>
+                                                    <option value="PE">Purdue Extension</option>
+                                                    <option value="Adams">Adams</option>
+                                                    <option value="Allen">Allen</option>
+                                                    <option value="Bartholomew">Bartholomew</option>
+                                                    <option value="Benton">Benton</option>
+                                                    <option value="Boone">Boone</option>
+                                                    <option value="Brown">Brown</option>
+                                                    <option value="3">All Other Authors...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Yes, suppress my byline</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Publish & Unpublish Options</h3></div>
+                                <div class="panel-body">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="dateTimeFromSelect">Publish Date</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            <div class="input-group date datetimeDay">
+                                                <input type="text" class="datetimeDay form-control"/>
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="dateTimeToSelect">Unpublish Date (optional)</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            <div class="input-group date datetimeDay">
+                                                <input type="text" class="datetimeDay form-control"/>
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Content & Options</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group required">
+                                                <label for="dateTimeFromSelect">Content</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                                <div class="input-group date">
+                                                    <textarea cols="120" rows="5" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="dateTimeToSelect">Program Areas</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> 4-H</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> ANR</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> ECD</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> HHS</label> <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div> <!-- /.panel -->
+                            <div>
+                                <a href="Events.html" class="btn btn-primary btn-lg btn-block">Save Event</a> </br>
+                            </div>
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+
+                <!--START OF CATEGORIES PANEL-->
+                <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Categories & Subcategories</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="inputLocation">Select Categories</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                <select class="form-control " id="countiesExt2" multiple="multiple">
+                                                    <option value="Ext">Agriculture</option>
+                                                    <option value="Ext2">Community</option>
+                                                    <option value="Ext3">Environment</option>
+                                                    <option value="Ext4">Family</option>
+                                                    <option value="Ext5">Food</option>
+                                                    <option value="Ext6">Garden</option>
+                                                    <option value="Ext7">Youth</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                        <a href="#" class="btn btn-default"><i class="fa fa-save"></i> Save Categories</a>
+                                        <br></br>
+                                        </div>
+                                    </div>
+
+                                     <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="inputLocation">Select Subcategories</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                <select class="form-control " id="countiesExt3" multiple="multiple">
+                                                    <option value="Ext">Agriculture</option>
+                                                    <option value="Community">Community</option>
+                                                    <option value="Environment">Environment</option>
+                                                    <option value="Family">Family</option>
+                                                    <option value="Ext6">Food</option>
+                                                    <option value="Ext7">Garden</option>
+                                                    <option value="Ext8">Youth</option>
+                                                    <option value="Ext9">Agriculture</option>
+                                                    <option value="Ext10">Community</option>
+                                                    <option value="Ext11">Environment</option>
+                                                    <option value="Ext12">Family</option>
+                                                    <option value="Ext13">Food</option>
+                                                    <option value="Ext14">Garden</option>
+                                                    <option value="Ext15">Youth</option>
+                                                    <option value="Ext16">Agriculture</option>
+                                                    <option value="Ext17">Community</option>
+                                                    <option value="Ext18">Environment</option>
+                                                    <option value="Ext19">Family</option>
+                                                    <option value="Ext20">Food</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <a href="#" class="btn btn-default"><i class="fa fa-save"></i> Save Subcategories</a>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+                    <!--END OF CATEGORIES PANEL-->
+
+
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 class="panel-title">Share Your Event</h3></div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="inputLocation">Select Locations</label>  <a href="#"><i class="fa fa-question-circle text-muted"></i></a><br />
+                                                <select class="form-control" id="countiesExt" multiple="multiple">
+                                                    <option value="Ext">Extension</option>
+                                                    <option value="Adams">Adams</option>
+                                                    <option value="Allen">Allen</option>
+                                                    <option value="Bartholomew">Bartholomew</option>
+                                                    <option value="Benton">Benton</option>
+                                                    <option value="Boone">Boone</option>
+                                                    <option value="Brown">Brown</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <a href="#" class="btn btn-default"><i class="fa fa-share-alt"></i> Share to these Locations</a>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.panel-body -->
+                            </div>  <!-- /.panel -->
+                        </div> <!-- /.col-sm-12 -->
+                    </div> <!-- /.row -->
+                    </form>
+
+
+
+
+
+
+
+
+
+                    <!-- END MOCKUP FOR EVENTADD PAGE. -->
+
+    <div id="ctl00_MainContentPlaceHolder_contactDiv">
+
+
+
+
+
+    </div>
+
+
+                </div>
+
+                <!-- Page footer -->
+                <footer>
+                    <p class="right alignRight">
+                            E-mail any questions about
+                        <br/>
+                        content or procedure to
+                        <a href="mailto:agithelp@purdue.edu" title="E-mail any questions about content or procedure to AgITHelp@purdue.edu" >AgIT Help</a>
+                        <br/>
+                            E-mail all feedback
+                        <br />
+                            and comments to
+                        <a href="mailto:depotfeedback@lists.purdue.edu" title="E-mail all feedback and comments to depotfeedback@lists.purdue.edu" >Depot Feedback</a>
+                    </p>
+
+                    <p>
+                        <a href="http://www.ag.purdue.edu/Pages/default.aspx" title="Purdue Agriculture">Purdue Agriculture</a>, 615 West State Street,
+                        <br />
+                        West Lafayette, IN 47907-2053 USA, (765) 494-8392
+                        <br />
+                        &copy; 2015 <a href="http://www.purdue.edu/purdue/disclaimer.html" title="Disclaimer">Purdue University</a>.&nbsp;&nbsp;<a href="http://www.purdue.edu/purdue/ea_eou_statement.html" title="Nondiscrimination Policy">An equal access, equal opportunity university</a>.
+                    </p>
+                </footer>
+            </div>
+            <!-- End of #container -->
+
+            <!-- Start of help container -->
+            <div id="helpcontainer" style="display: none;">
+                <div id="helptoprow">
+                    <a href="javascript:CloseHelpDocument();" title="Close Help" class="right">
+                        <img alt="" src="images/CloseBtn.png" style="height: 10px; width: 10px;">
+                    </a>
+
+                    <a href="javascript:PopoutHelpDocument();" title="Display in new window">Popout</a>
+                </div>
+
+                <div id="helpbody">
+                    <iframe id="helpFrame" style="border: none;"></iframe>
+                </div>
+            </div>
+            <!-- End of help container -->
+        </div>
+        <!-- End of wrapper -->
+
+        <!-- Scripts:  should be concatenated and minified via ant build script -->
+        <script type="text/javascript" src="scripts/moment.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.datetimeDay').datetimepicker({
+                    format: 'MM-DD-YYYY',
+                    showClose: true
+                });
+            });
+        </script>
+        <script src="scripts/tota11y.min.js"></script>
+        <!-- Scripts:  should be concatenated and minified via ant build script -->
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-multiselect.js"></script>
+        <script type="text/javascript">
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#countiesExt2, #countiesExt, #countiesExt3').multiselect({
+                    buttonWidth: '100%',
+                    dropRight: true,
+                    numberDisplayed: 1,
+                    enableFiltering: 1,
+                    enableCaseInsensitiveFiltering: true,
+                    includeSelectAllOption: 1,
+                    maxHeight: 300,
+                });
+            });
+        </script>
+        <script src="scripts/tota11y.min.js"></script>
+
+
+
+</form>
+</body>
+</html>
