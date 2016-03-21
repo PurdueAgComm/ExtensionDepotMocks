@@ -506,8 +506,8 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3 class="panel-title">Manage Files</h3></div>
                                 <div class="panel-body">
-                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload File</i></a>
-                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+                                   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#fileUpload"><i class="fa fa-upload"></i> Upload File</i></a>
+                                   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#fileLibrary"><i class="fa fa-plus-circle"></i> Select from Library</a>
 
                                     <table class="table table-hover table-striped">
                                         <thead>
@@ -578,8 +578,8 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3 class="panel-title">Manage Images</h3></div>
                                 <div class="panel-body">
-                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload Image</i></a>
-                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+                                   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#imageUpload"><i class="fa fa-upload"></i> Upload Image</i></a>
+                                   <a href="#" class="btn btn-default"  data-toggle="modal" data-target="#imageLibrary"><i class="fa fa-plus-circle"></i> Select from Library</a>
 
                                     <!-- MAX WIDTH OF IMAGE IS 100 -->
                                     <table class="table table-hover table-striped">
@@ -651,8 +651,8 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3 class="panel-title">Manage Videos</h3></div>
                                 <div class="panel-body">
-                                   <a href="#" class="btn btn-default"><i class="fa fa-upload"></i> Upload Video</i></a>
-                                   <a href="#" class="btn btn-default"><i class="fa fa-plus-circle"></i> Select from Library</a>
+                                   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoUpload"><i class="fa fa-upload"></i> Upload Video</i></a>
+                                   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoLibrary"><i class="fa fa-plus-circle"></i> Select from Library</a>
 
                                     <table class="table table-hover table-striped">
                                         <thead>
@@ -719,6 +719,405 @@
                     </div> <!-- /.row -->
 
                     </form>
+
+                    <!-- File Upload Modal -->
+                    <div class="modal fade" id="fileUpload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Upload File</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                                <label for="exampleInputFile">File to Upload</label>
+                                <input type="file" id="exampleInputFile">
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">File Link Text</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">File Description</label>  <a href="#" tabindex="-1"><i class="fa fa-question-circle text-muted"></i></a>
+                                            <textarea rows="7" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Upload File</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- File lLibrary Modal -->
+                    <div class="modal fade" id="fileLibrary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Select File from Library</h4>
+                          </div>
+                          <div class="modal-body">
+
+
+                            <div class="form-group required">
+                            <label for="inputTitle">Choose File</label>
+                            <br>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-folder"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>My Files</option>
+                                        <option>Home Files</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-file"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>Select a File</option>
+                                        <option>listOfMusicalReferencesJoanMentioned5791.pdf</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+
+                            <br><br>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">File Link Text</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Select File</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Image Upload Modal -->
+                    <div class="modal fade" id="imageUpload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Upload Image</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                                <label for="exampleInputFile">Image to Upload</label>
+                                <input type="file" id="exampleInputFile">
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Size</label>
+                                            <select class="form-control">
+                                                <option>Select a Size</option>
+                                                <option>Thumbnail (150 x 150)</option>
+                                                <option>Detail (250 x 250)</option>
+                                                <option>Banner (560 x 145)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Location</label>
+                                            <select class="form-control">
+                                                <option>Select a Location</option>
+                                                <option>Left</option>
+                                                <option>Center</option>
+                                                <option>Right</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Alternate Text</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Caption</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Description</label>
+                                            <textarea rows="7" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Upload Image</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Image Library Modal -->
+                    <div class="modal fade" id="imageLibrary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Select Image from Library</h4>
+                          </div>
+                          <div class="modal-body">
+
+
+                            <div class="form-group required">
+                            <label for="inputTitle">Choose Image</label>
+                            <br>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-folder"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>My Images</option>
+                                        <option>Home Images</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-file"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>Select an Image</option>
+                                        <option>listOfMusicalReferencesJoanMentioned5791.pdf</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+
+                            <br><br>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Location</label>
+                                            <select class="form-control">
+                                                <option>Select a Location</option>
+                                                <option>Left</option>
+                                                <option>Center</option>
+                                                <option>Right</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Caption</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Image Alternate Text</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Select Image</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Video Upload Modal -->
+                    <div class="modal fade" id="videoUpload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Upload Video</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Video Title</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Video URL</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="inputTitle">Transcript URL</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="inputTitle">Video Link Text</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Video Description</label>
+                                            <textarea rows="7" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Upload Video</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Video Library Modal -->
+                    <div class="modal fade" id="videoLibrary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Select Video from Library</h4>
+                          </div>
+                          <div class="modal-body">
+
+
+                            <div class="form-group required">
+                            <label for="inputTitle">Choose Video</label>
+                            <br>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-folder"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>My Videos</option>
+                                        <option>America's Funniest Home Videos</option>
+                                        <option>[Boring] Home Videos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-file"></i></span>
+                                    <select type="text" class="form-control">
+                                        <option>Select a Video</option>
+                                        <option>TITLE OF VIDEO NOT URL...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+
+                            <br><br>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label for="inputTitle">Video Title</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="inputTitle">Video Link Text</label>
+                                            <input type="text" class="form-control required" id="inputTitle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Select Video</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
 
 
