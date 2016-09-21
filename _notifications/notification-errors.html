@@ -157,7 +157,7 @@
 
                             <span class="pull-left" id="ctl00_menuUsernameLbl">Kenneth N Wilson</span>
                             <span class="pull-left"><i class="fa fa-bell fa-fw"></i> Notifications</span>
-                            <div class="pull-left" style="margin-top: 4px; margin-left: -8px;"><span  style="padding: 6px;" class="label label-danger">23</span></div>
+                            <div class="pull-left" style="margin-top: 4px; margin-left: -8px;"><span  style="padding: 6px;" class="label label-danger">10</span></div>
 
 
                         </li>
@@ -178,20 +178,130 @@
 
     <div id="ctl00_MainContentPlaceHolder_contactDiv">
     <h2>Notification Center</h2>
+    <div class="col-sm-8">
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="exampleInputName2 required">Home <i class="fa fa-question-circle"></i></label>
+            <select style="margin-left: 15px;" class="form-control">
+                <option>Extension (3)</option>
+                <option>Allen (6)</option>
+                <option>Adams</option>
+                <option>.</option>
+                <option selected>Tippecanoe (1)</option>
+                <option>.</option>
+                <option>longername to make</option>
+            </select>
+            <i class="fa text-info fa-exclamation-circle" data-toggle="tooltip" title="Only showing homes that the user belongs to"></i>
+          </div>
+        </form>
+    </div>
+   <div class="col-sm-4">
+        <a href="notification-no-notifications.html" class="btn btn-default pull-right"><i class="fa fa-check-square-o"></i> Mark All Homes As Read</a>
+    </div>
+    <br style="clear: both;"><br style="clear: both;">
 
-    <h4>New Notifications</h4>
+    <!-- For when user clicks reject on an item -->
+        <div class="alert alert-danger">
+            <p><strong>Slow on the draw...</strong></p>
+            <p>We were unable to reject <strong>Article/Event Name</strong> because it has already been rejected by another user.</p>
+        </div>
+
+        <div class="alert alert-danger">
+            <p><strong>Where'd it go?</strong></p>
+            <p>We were unable to reject <strong>Article/Event Name</strong> because it has been deleted by another user.</p>
+        </div>
+
+        <div class="alert alert-danger">
+            <p><strong>Just missed it...</strong></p>
+            <p>We were unable to reject <strong>Article/Event Name</strong> because it has expired and is no longer public.</p>
+        </div>
+
+    <!-- For when user clicks accept on an item -->
+        <div class="alert alert-danger">
+            <p><strong>You need a quicker trigger finger...</strong></p>
+            <p>We were unable to accept <strong>Article/Event Name</strong> because it has already been accepted by another user.</p>
+        </div>
+
+        <div class="alert alert-danger">
+            <p><strong>Early bird gets the worm...</strong></p>
+            <p>We were unable to accept <strong>Article/Event Name</strong> because it has already been deleted by another user.</p>
+        </div>
+
+        <div class="alert alert-danger">
+            <p><strong>Just missed it...</strong></p>
+            <p>We were unable to accept <strong>Article/Event Name</strong> because it has expired and is no longer public.</p>
+        </div>
+
+    <h3>New Notifications</h3>
+
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="This event is hidden to the public." class="fa fa-times-circle fa-2x text-danger"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe county</strong> has rejected <a href="#">Wonderful Event</a> hosted by <strong>Adams county</strong>. <br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+            <a href="#" class="btn btn-default pull-right"><i class="fa fa-check"></i> Accept Event</a>
+        </div>
+    </div>
+
+
+    <!-- PREVIOUS NOTIFICATIONS SECTION -->
+
+
+    <br style="clear: both;" /><br style="clear: both;" />
+    <h3>Viewed Notifications</h3>
 
     <!-- New Notifications -->
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>Expired Article</strong> has expired and no longer appears to the public.<br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+        </div>
+    </div>
+
     <div class="notification">
         <div class="notification-status">
             <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-check-circle fa-2x text-success"></i>
         </div>
         <div class="notification-meta">
-        <strong>Adams county</strong> has shared <a href="#">Wonderful Event</a> with <strong>Tippecanoe county</strong>.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <strong>Harrison county</strong> has shared <a href="#">Wonderful Article</a> with <strong>Tippecanoe county</strong>.<br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
-            <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Event</a>
+            <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Article</a>
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-check-circle fa-2x text-success"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>State Extension</strong> has shared <a href="#">Wonderful State Article</a> with <strong>Tippecanoe county</strong>.<br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>State Extension</strong> has globally featured <a href="#">Globally Featured Event</a>. This will be featured at the top of your events until it expires on May 31, 2018. <br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
         </div>
     </div>
 
@@ -201,7 +311,7 @@
         </div>
         <div class="notification-meta">
         <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe county</strong> has rejected <a href="#">Terrible Event</a> hosted by <strong>Adams county</strong>. <br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
             <a href="#" class="btn btn-default pull-right"><i class="fa fa-check"></i> Accept Event</a>
@@ -214,7 +324,7 @@
         </div>
         <div class="notification-meta">
         <strong>Dubois county</strong> has unshared <a href="#">Unshared Event</a>. The event no longer appears to the public.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
         </div>
@@ -225,8 +335,33 @@
             <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
         </div>
         <div class="notification-meta">
-        <strong>Dubois county</strong> has archived <a href="#">Archived Event</a>. The event no longer appears to the public.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <strong>State Extension</strong> has globally featured <a href="#">Globally Featured Article</a>. This will be featured at the top of your articles until it expires on May 30, 2018. <br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-check-circle fa-2x text-success"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe county</strong> has accepted <a href="#">Previously Rejected Article</a> hosted by <strong>Warren county</strong>. <br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+            <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Article</a>
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>Dubois county</strong> has deleted <strong>Deleted Event</strong>. The event no longer appears to the public.<br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
         </div>
@@ -238,7 +373,7 @@
         </div>
         <div class="notification-meta">
         <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe county</strong> has accepted <a href="#">Previously Rejected Event</a> hosted by <strong>Warren county</strong>. <br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
             <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Event</a>
@@ -247,36 +382,44 @@
 
     <div class="notification">
         <div class="notification-status">
-            <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
+            <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-check-circle fa-2x text-success"></i>
         </div>
         <div class="notification-meta">
-        <strong>Adams county</strong> has canceled <a href="#">Canceled Event</a>. This event will appear as canceled to the public.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <strong>State Extension</strong> has shared <a href="#">Wonderful State Event</a> with <strong>Tippecanoe county</strong>.<br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
+
         </div>
     </div>
 
-
-    <!-- In the Depot, this would actually be DELETED; however, in our mock up this exists to show you that the other notification refers to this action that occurred at some other time. -->
-    <div class="notification" style="background-color: #f5f5f5;" data-toggle="tooltip" data-title="In the Depot, this would actually be DELETED (not appear); however, in our mock up this exists to show you that the other notification refers to this action that occurred at some other time.">
+    <div class="notification">
         <div class="notification-status">
-            <i data-toggle="tooltip" data-title="This event is hidden to the public." class="fa fa-times-circle fa-2x text-danger"></i>
+            <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-times-circle fa-2x text-danger"></i>
         </div>
         <div class="notification-meta">
-        <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe County</strong> has rejected <a href="#">Previously Rejected Event</a> by <strong>Warren county</strong>.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <strong>Andrew Banta</strong> on behalf of <strong>Tippecanoe county</strong> has rejected <a href="#">Rejected Article</a> hosted by <strong>Warren county</strong>. <br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
-            <a href="#" class="btn btn-default pull-right"><i class="fa fa-check"></i> Accept Event</a>
+            <a href="#" class="btn btn-default pull-right"><i class="fa fa-check"></i> Accept Article</a>
         </div>
     </div>
 
-    <!-- PREVIOUS NOTIFICATIONS SECTION -->
 
+    <div class="notification">
+        <div class="notification-status">
+            <i data-toggle="tooltip" data-title="This event is visible to the public." class="fa fa-check-circle fa-2x text-success"></i>
+        </div>
+        <div class="notification-meta">
+        <strong>Adams county</strong> has shared <strong>Future Published Article</strong> with <strong>Tippecanoe county</strong>. This article will appear to the public on October 30, 2016.<br />
+        <small class="text-muted"><i class="fa fa-newspaper-o fa-fw"></i> Article | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        </div>
+        <div class="notification-action">
+            <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Article</a>
+        </div>
+    </div>
 
-    <br style="clear: both;" /><br style="clear: both;" />
-    <h4>Previous Notifications</h4>
      <!-- New Notifications -->
     <div class="notification">
         <div class="notification-status">
@@ -284,7 +427,7 @@
         </div>
         <div class="notification-meta">
         <strong>Crawford county</strong> has shared <a href="#">Bug Dinner</a> with <strong>Tippecanoe county</strong>.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
             <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Event</a>
@@ -298,26 +441,12 @@
         </div>
         <div class="notification-meta">
         <strong>Benton county</strong> has shared <a href="#">Dan Patch Days</a> with <strong>Tippecanoe county</strong>.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
             <a href="#" class="btn btn-default pull-right"><i class="fa fa-times"></i> Reject Event</a>
         </div>
     </div>
-
-     <!-- New Notifications -->
-    <div class="notification">
-        <div class="notification-status">
-            <i data-toggle="tooltip" data-title="General information notice" class="fa fa-info-circle fa-2x text-info"></i>
-        </div>
-        <div class="notification-meta">
-        <strong>White county</strong> has canceled <a href="#">Canoe Trip</a>. This event will appear as canceled to the public.<br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
-        </div>
-        <div class="notification-action">
-        </div>
-    </div>
-
 
     <div class="notification">
         <div class="notification-status">
@@ -325,7 +454,7 @@
         </div>
         <div class="notification-meta">
         <strong>Kenny Wilson</strong> on behalf of <strong>Tippecanoe county</strong> has rejected <a href="#">Indiana Beach Day</a> hosted by <strong>White county</strong>. <br />
-        <small><i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
+        <small class="text-muted"><i class="fa fa-calendar fa-fw"></i> Event | <i class="fa fa-clock-o"></i> August 12, 2015 at 2:57 PM EST</small><br />
         </div>
         <div class="notification-action">
             <a href="#" class="btn btn-default pull-right"><i class="fa fa-check"></i> Accept Event</a>
